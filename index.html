@@ -191,28 +191,33 @@
             method="POST"
             target="_blank"
           >
-            <div class="input-wrapper">
-              <label class="input-label" for="name">Name</label>
-              <input
-                class="input-field"
-                type="text"
-                id="name"
-                name="first_name"
-                placeholder="Enter your first name"
-              />
-            </div>
-            <div class="input-wrapper">
-              <label class="input-label" for="surname">Surname</label>
-              <input
-                class="input-field"
-                type="text"
-                id="surname"
-                name="last_name"
-                placeholder="Enter your last name"
-              />
-            </div>
+            <fieldset class="personal-fieldset">
+              <legend class="fieldset-legend">Personal Information</legend>
+              <div class="form-row">
+                <div class="input-wrapper">
+                  <label class="input-label" for="name">Name</label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="name"
+                    name="first_name"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label" for="surname">Surname</label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="surname"
+                    name="last_name"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+            </fieldset>
             <fieldset class="address-fieldset">
-              <legend class="fieldset-legend form-italic-title">Address</legend>
+              <legend class="fieldset-legend">Address</legend>
               <div class="input-wrapper">
                 <label class="input-label" for="street">Street</label>
                 <input
@@ -223,51 +228,55 @@
                   placeholder="Enter your street name and number"
                 />
               </div>
-              <div class="input-wrapper">
-                <label class="input-label" for="city">City</label>
-                <input
-                  class="input-field"
-                  type="text"
-                  id="city"
-                  name="city"
-                  placeholder="Enter your city"
-                />
+              <div class="form-row">
+                <div class="input-wrapper">
+                  <label class="input-label" for="city">City</label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter your city"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label" for="postal-code">Postal Code</label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="postal-code"
+                    name="postal_code"
+                    placeholder="Enter your postal code"
+                  />
+                </div>
               </div>
-              <div class="input-wrapper">
-                <label class="input-label" for="postal-code">Postal Code</label>
-                <input
-                  class="input-field"
-                  type="text"
-                  id="postal-code"
-                  name="postal_code"
-                  placeholder="Enter your postal code"
-                />
-              </div>
-              <div class="input-wrapper">
-                <label class="input-label" for="province"
-                  >Province/Region</label
-                >
-                <input
-                  class="input-field"
-                  type="text"
-                  id="province"
-                  name="province_region"
-                  placeholder="Enter your State or region"
-                />
-              </div>
-              <div class="input-wrapper">
-                <label class="input-label" for="country">Country</label>
-                <input
-                  class="input-field"
-                  type="text"
-                  id="country"
-                  name="country"
-                  placeholder="Enter your country"
-                />
+              <div class="form-row">
+                <div class="input-wrapper">
+                  <label class="input-label" for="province"
+                    >Province/Region</label
+                  >
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="province"
+                    name="province_region"
+                    placeholder="Enter your State or region"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label" for="country">Country</label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Enter your country"
+                  />
+                </div>
               </div>
             </fieldset>
             <fieldset class="attendance-fieldset">
-              <legend class="fieldset-legend form-italic-title">
+              <legend class="fieldset-legend">
                 Will you be attending?
               </legend>
               <div class="radio-options-container">
@@ -298,7 +307,7 @@
             <div class="input-wrapper">
               <label
                 for="food-restrictions"
-                class="input-label form-italic-title"
+                class="fieldset-legend"
                 >Food restrictions</label
               >
               <p class="text-wrapper-21">
