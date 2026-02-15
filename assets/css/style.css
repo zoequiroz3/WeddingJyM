@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -359,6 +360,7 @@ p {
   padding: 12px 16px;
   border-radius: 8px;
   border: 1.5px solid #6fa1b6;
+  resize: none;
   background-color: white;
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
@@ -445,8 +447,8 @@ p {
   text-align: center;
 }
 article.how-to-get-here {
-  background-color: #c7ceae;
-  padding: 20px;
+  background: url("../img/htgh.png") no-repeat center / 100% 100%;
+  padding: 40px 30px;
   margin-top: 30px;
   position: relative;
 }
@@ -475,6 +477,23 @@ img.where-to-stay-2 {
   max-width: 700px;
   height: auto;
   margin: 20px 0;
+}
+
+.book-early-notice {
+  background: url("../img/Vector.png") no-repeat center / 100% 100%;
+  padding: 10px 25px;
+  margin: 25px auto;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .book-early-notice {
+    white-space: normal;
+    width: auto;
+    padding: 10px 20px;
+    margin: 15px 20px;
+  }
 }
 .sub-heading {
   font-size: clamp(24px, 5vw, 40px);
@@ -533,10 +552,24 @@ img.where-to-stay-2 {
 
 /* --- AROUND MONTALTO SECTION --- */
 .around-montalto {
+  position: relative;
   text-align: center;
   padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
+  isolation: isolate;
+}
+
+.around-montalto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: url("../img/bg yellow.png") no-repeat center / 100% 100%;
+  z-index: -1;
 }
 
 .around-montalto-intro {
@@ -550,41 +583,59 @@ img.where-to-stay-2 {
   font-size: 22px;
 }
 
+.recommendations-wrapper {
+  margin: 0 auto;
+}
+
+.recommendations-card {
+  background: #e6ddc9;
+  border-radius: 0 0 16px 16px;
+  padding: 30px 50px 40px;
+}
+
 .tabs {
   display: flex;
-  justify-content: center;
   gap: 0;
-  border-bottom: 2px solid #0d3950;
-  margin-bottom: 20px;
 }
 
 .tab-button {
-  background: none;
+  flex: 1;
+  background: #d4c9b1;
   border: none;
-  padding: 12px 30px;
+  padding: 10px 24px;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #0d3950;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  transition: border-color 0.2s;
+  border-radius: 0;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.tab-button:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.tab-button:last-child {
+  border-radius: 0 12px 0 0;
 }
 
 .tab-button:hover {
-  border-bottom-color: #6fa1b6;
+  background: #ddd3bd;
 }
 
 .tab-button.active {
-  border-bottom-color: #0d3950;
+  background: #e6ddc9;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #0d3950;
 }
 
 .tab-panel {
   display: none;
   text-align: left;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 .tab-panel.active {
@@ -592,15 +643,24 @@ img.where-to-stay-2 {
 }
 
 .recommendations-list {
-  list-style: disc;
-  padding-left: 25px;
+  list-style: none;
+  padding-left: 20px;
 }
 
 .recommendations-list li {
   font-family: "Source Sans 3", sans-serif;
   font-size: 20px;
   color: #0d3950;
-  padding: 6px 0;
+  padding: 8px 0;
+}
+
+.recommendations-list li::before {
+  content: "\2022";
+  color: #6fa1b6;
+  font-size: 14px;
+  display: inline-block;
+  width: 20px;
+  margin-left: -20px;
 }
 
 /* --- WEDDING GIFTS SECTION --- */
@@ -820,8 +880,12 @@ img.where-to-stay-2 {
   }
 
   /* Around Montalto */
+  .recommendations-card {
+    padding: 25px 35px 30px;
+  }
+
   .tab-button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     font-size: 16px;
   }
 
@@ -935,9 +999,22 @@ img.where-to-stay-2 {
   }
 
   /* Around Montalto mobile */
+  .recommendations-card {
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+  }
+
   .tab-button {
-    padding: 10px 16px;
+    padding: 8px 10px;
     font-size: 14px;
+  }
+
+  .tab-button:first-child {
+    border-radius: 8px 0 0 0;
+  }
+
+  .tab-button:last-child {
+    border-radius: 0 8px 0 0;
   }
 
   .recommendations-list li {

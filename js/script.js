@@ -171,14 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       tabPanels.forEach((panel) => {
         panel.classList.remove('active');
-        panel.hidden = true;
       });
 
       button.classList.add('active');
       button.setAttribute('aria-selected', 'true');
       const activePanel = document.getElementById('panel-' + target);
       activePanel.classList.add('active');
-      activePanel.hidden = false;
     });
   });
 
