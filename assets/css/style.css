@@ -46,6 +46,11 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 8px rgba(13, 57, 80, 0.1);
 }
 
 .img-logo-nav {
@@ -54,6 +59,11 @@ p {
   height: auto;
   opacity: 0;
   transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.img-logo-nav:hover {
+  opacity: 0.8 !important;
 }
 
 .img-logo-nav.visible {
@@ -123,11 +133,19 @@ p {
   padding: 10px 24px;
   text-decoration: none;
   border-radius: 10px;
-  margin-bottom: 40px;
   font-size: 20px;
   border: none;
   cursor: pointer;
   font-family: "Source Sans 3", sans-serif;
+  transition: opacity 0.2s;
+}
+
+.button-2:hover {
+  opacity: 0.85;
+}
+
+.location-wrapper .button-2 {
+  margin-bottom: 40px;
 }
 
 /* --- HERO SECTION --- */
@@ -345,6 +363,35 @@ p {
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
   width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #0d3950;
+  box-shadow: 0 0 0 3px rgba(111, 161, 182, 0.3);
+}
+
+.required-star {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.rsvp-confirmation {
+  text-align: center;
+  padding: 30px;
+}
+
+.confirmation-message {
+  font-size: 22px;
+  color: #0d3950;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.button-2.loading {
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .form-italic-title {

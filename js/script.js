@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       distance: '18 minutes',
     },
     {
-      name: 'Agriturismo Colle d’Oro - Pescia Romana',
+      name: 'Agriturismo Colle d\u2019Oro - Pescia Romana',
       website: 'www.agriturismocolledoro.com',
       phone: '+39 331 217 0012',
       distance: '18 minutes',
@@ -213,19 +213,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Logo visibility on scroll ---
+  // --- Logo visibility & navbar shadow on scroll ---
   const heroImage = document.querySelector('.imagen-inicio');
   const navLogo = document.querySelector('.img-logo-nav');
+  const navbar = document.querySelector('.navbar');
 
   if (heroImage && navLogo) {
     window.addEventListener('scroll', () => {
       const rect = heroImage.getBoundingClientRect();
       if (rect.top < 0) {
         navLogo.classList.add('visible');
+        navbar.classList.add('scrolled');
       } else {
         navLogo.classList.remove('visible');
+        navbar.classList.remove('scrolled');
       }
     }, { passive: true });
+  }
+
+  // --- RSVP form submission with feedback ---
+  const rsvpForm = document.getElementById('rsvp-form');
+  const rsvpSubmitBtn = document.getElementById('rsvp-submit-btn');
+  const rsvpConfirmation = document.getElementById('rsvp-confirmation');
+
+  if (rsvpForm) {
+    rsvpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(rsvpForm);
+      rsvpSubmitBtn.textContent = 'Sending...';
+      rsvpSubmitBtn.classList.add('loading');
+
+      fetch(rsvpForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      })
+        .then((response) => {
+          if (response.ok) {
+            rsvpForm.hidden = true;
+            rsvpConfirmation.hidden = false;
+          } else {
+            rsvpSubmitBtn.textContent = 'Submit';
+            rsvpSubmitBtn.classList.remove('loading');
+            alert('There was a problem submitting your RSVP. Please try again or contact us directly.');
+          }
+        })
+        .catch(() => {
+          rsvpSubmitBtn.textContent = 'Submit';
+          rsvpSubmitBtn.classList.remove('loading');
+          alert('There was a problem submitting your RSVP. Please try again or contact us directly.');
+        });
+    });
   }
 
   // --- FAQ accordion ---

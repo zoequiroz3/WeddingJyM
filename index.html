@@ -4,6 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>Wedding Invitation - Joaquin & Marita</title>
+    <meta name="description" content="Join us for the wedding of Joaquin & Marita on July 11th, 2026 in Montalto di Castro, Italy." />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Joaquin & Marita - Wedding Invitation" />
+    <meta property="og:description" content="Join us for our wedding celebration on July 11th, 2026 in Montalto di Castro, Italy." />
+    <meta property="og:image" content="assets/img/Header-orizz.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logoJyM.png" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -87,12 +98,12 @@
 
         <article class="event-section ceremony" id="ceremony">
             <div class="title-container">
-              <h1 class="title-weekend">Wedding Ceremony</h1>
+              <h2 class="title-weekend">Wedding Ceremony</h2>
             </div>
 
             <div class="event-body">
               <div class="img-container">
-                <img class="img-event img-ceremony" src="assets/img/Chiesa.png" alt="Chiesa di Santa Maria Assunta" />
+                <img class="img-event img-ceremony" src="assets/img/Chiesa.png" alt="Chiesa di Santa Maria Assunta" loading="lazy" />
               </div>
 
               <div class="event-details text-ceremony-align">
@@ -112,7 +123,7 @@
                         </div>
                       </div>
 
-                      <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="button-2">Directions</a>
+                      <a href="https://maps.google.com/?q=Chiesa+di+Santa+Maria+Assunta,+Via+S.+Paolo+della+Croce+3,+Montalto+di+Castro" target="_blank" rel="noopener noreferrer" class="button-2">Directions</a>
                   </div>
                 
                   <p class="dress-code">Dress code: Formal attire – blue suit</p>
@@ -140,7 +151,7 @@
 
         <article class="event-section cocktail-and-dinner" id="cocktail">
           <div class="title-container">
-            <h1 class="title-weekend">Cocktail and Dinner Party</h1>
+            <h2 class="title-weekend">Cocktail and Dinner Party</h2>
             <p class="p">Saturday 11th of July 2026 at 18.30h</p>
           </div>
           <div class="img-container">
@@ -148,6 +159,7 @@
               class="img-event img-dinner"
               src="assets/img/Ceremony - Villa senza cielo .png"
               alt="La Rovere venue"
+              loading="lazy"
             />
           </div>
 
@@ -168,7 +180,7 @@
               </div>
 
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/?q=La+Rovere,+Strada+della+Ramata+1,+Montalto+di+Castro"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="button-2"
@@ -189,29 +201,31 @@
             class="form"
             action="YOUR_FORMSPREE_ENDPOINT_HERE"
             method="POST"
-            target="_blank"
+            id="rsvp-form"
           >
             <fieldset class="personal-fieldset">
               <legend class="fieldset-legend">Personal Information</legend>
               <div class="form-row">
                 <div class="input-wrapper">
-                  <label class="input-label" for="name">Name</label>
+                  <label class="input-label" for="name">Name <span class="required-star">*</span></label>
                   <input
                     class="input-field"
                     type="text"
                     id="name"
                     name="first_name"
                     placeholder="Enter your first name"
+                    required
                   />
                 </div>
                 <div class="input-wrapper">
-                  <label class="input-label" for="surname">Surname</label>
+                  <label class="input-label" for="surname">Surname <span class="required-star">*</span></label>
                   <input
                     class="input-field"
                     type="text"
                     id="surname"
                     name="last_name"
                     placeholder="Enter your last name"
+                    required
                   />
                 </div>
               </div>
@@ -277,7 +291,7 @@
             </fieldset>
             <fieldset class="attendance-fieldset">
               <legend class="fieldset-legend">
-                Will you be attending?
+                Will you be attending? <span class="required-star">*</span>
               </legend>
               <div class="radio-options-container">
                 <div class="radio-option">
@@ -323,9 +337,12 @@
               ></textarea>
             </div>
             <div class="submit-button-container">
-              <button type="submit" class="button-2">Submit</button>
+              <button type="submit" class="button-2" id="rsvp-submit-btn">Submit</button>
             </div>
           </form>
+          <div id="rsvp-confirmation" class="rsvp-confirmation" hidden>
+            <p class="confirmation-message">Thank you! Your RSVP has been received.</p>
+          </div>
         </div>
       </section>
 
@@ -345,6 +362,7 @@
                   class="how-to-get-here"
                   src="assets/img/How to get here .png"
                   alt="Airport illustration"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -376,6 +394,7 @@
               class="where-to-stay-2"
               src="assets/img/Where to stay 2.png"
               alt="Hotel illustration"
+              loading="lazy"
             />
           </div>
           <p class="we-have-put-together">
@@ -388,7 +407,7 @@
               >"Matrimonio Joaquin e Marita"​<br
             /></span>
             <span class="span"
-              ><br />We suggest you book your accomodation early as availability
+              ><br />We suggest you book your accommodation early as availability
               is limited, especially during the busy summer season!</span
             >
           </p>
@@ -414,7 +433,7 @@
         <p class="around-montalto-intro">
           The area around Montalto offers many activities, from relaxing days at the beach to exploring the local culture and heritage, including great food! Everything is close enough but keep in mind there is always some driving involved. Also we advise you book the restaurants and the beaches in advance as summer can get very busy around here.
         </p>
-        <p class="around-montalto-subtitle"><em>Here are a few recomendations:</em></p>
+        <p class="around-montalto-subtitle"><em>Here are a few recommendations:</em></p>
 
         <div class="tabs" role="tablist" aria-label="Recommendations">
           <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-beaches" data-tab="beaches">BEACHES</button>
