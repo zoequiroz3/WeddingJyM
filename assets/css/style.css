@@ -1,0 +1,856 @@
+/* --- GLOBAL RESET & FONTS --- */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #0d3950;
+}
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  color: #0d3950;
+  font-size: 24px;
+}
+
+.landing-quicksand {
+  background-color: #f1e8d5;
+}
+
+/* --- COMPONENTS --- */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #f1e8d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.img-logo-nav {
+  padding: 5px;
+  max-width: 75px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-logo-nav.visible {
+  opacity: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  margin-right: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0d3950;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #0d3950;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Buttons */
+.button-2 {
+  display: inline-block;
+  background-color: #123446;
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* --- HERO SECTION --- */
+.inicio {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.img-sitio {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.titulos-inicio {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.hero-title,
+.hero-subtitle {
+  font-size: 30px;
+}
+
+/* --- DIVIDERS (Flores) --- */
+.division {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 110px;
+  flex-wrap: wrap;
+}
+
+.cornice-puffetti {
+  max-width: 250px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* --- EVENT SECTIONS (Shared Styles) --- */
+.event-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ceremony {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title-weekend {
+  font-size: clamp(24px, 6vw, 60px);
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.info-wedding {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.event-body {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: stretch; /* Obliga a la columna de texto a tener la altura de la imagen */
+  padding-top: 20px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  /* Esto distribuye: Fecha (arriba), Wrapper (centro), Dresscode (abajo) */
+  justify-content: space-between; 
+  align-items: center; /* ¡CRUCIAL! Esto evita que el botón se estire al 100% */
+  text-align: center; 
+  width: 100%;
+}
+
+.info-date {
+  width: 100%;
+}
+
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente este bloque */
+  align-items: center;     /* Centra horizontalmente el contenido (incluido el botón) */
+  gap: 25px;               /* Espacio entre Iglesia, Dirección y Botón */
+  flex-grow: 1;            /* Ocupa el espacio sobrante en el medio */
+}
+
+/* Event Images */
+.img-event {
+  height: auto;
+  display: block;
+}
+
+.img-ceremony {
+  width: 700px;
+  max-width: 100%;
+}
+.img-dinner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Clase especial para alinear texto con la cruz de la iglesia */
+.text-ceremony-align {
+  padding-top: 15px;
+}
+
+.event-venue {
+  font-size: 28px;
+  margin-bottom: 45px; /* AUMENTADO: Esto baja la ubicación y el botón */
+  line-height: 1.2;
+}
+
+.dress-code {
+  margin-top: 0;
+  padding-bottom: 5px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.address-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start; /* Alinea el pin con la primera línea de texto */
+  text-align: left;        /* Para que la calle y ciudad se lean bien */
+}
+
+.location-pin {
+  width: 18px;
+  margin-top: 5px;
+}
+
+.address-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.address-street {
+  margin-bottom: 15px; /* Espaciado uniforme */
+}
+
+/* --- RSVP SECTION --- */
+.RSVP {
+  background-image: url("../img/Fondo\ righe\ trasparente.png");
+  background-repeat: repeat;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.wrapper-RSVP {
+  background-color: #f1e8d5;
+  border: 2px solid #6fa1b6;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.wrapper-RSVP h2,
+.wrapper-RSVP p {
+  text-align: center;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-label {
+  color: #123446;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.input-field {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #6fa1b6;
+  background-color: white;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-italic-title {
+  font-family: "Source Sans 3", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+.fieldset-legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: #123446;
+  margin-bottom: 15px;
+}
+.address-fieldset,
+.attendance-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.radio-options-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+}
+.radio-option input {
+  margin-right: 5px;
+}
+.radio-option label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+.submit-button-container {
+  text-align: right;
+}
+
+/* --- TRAVEL SECTION --- */
+.travel {
+  text-align: center;
+}
+article.how-to-get-here {
+  background-color: #c7ceae;
+  padding: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+.columns-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+.column-image {
+  flex-basis: 50%;
+}
+.column-text {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+img.how-to-get-here {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+img.where-to-stay-2 {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 20px 0;
+}
+.sub-heading {
+  font-size: clamp(24px, 5vw, 40px);
+  margin-bottom: 5px;
+}
+#hotel-list-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- AROUND MONTALTO SECTION --- */
+.around-montalto {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.around-montalto-intro {
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.around-montalto-subtitle {
+  margin: 25px 0 30px;
+  font-size: 22px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 2px solid #0d3950;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 30px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d3950;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: border-color 0.2s;
+}
+
+.tab-button:hover {
+  border-bottom-color: #6fa1b6;
+}
+
+.tab-button.active {
+  border-bottom-color: #0d3950;
+}
+
+.tab-panel {
+  display: none;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.recommendations-list {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.recommendations-list li {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  color: #0d3950;
+  padding: 6px 0;
+}
+
+/* --- WEDDING GIFTS SECTION --- */
+.wedding-gifts {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wedding-gifts-img {
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.wedding-gifts-text {
+  max-width: 500px;
+  margin: 20px auto 30px;
+  line-height: 1.6;
+}
+
+.wishlist-button {
+  margin-bottom: 0;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-header-img {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.faq-item {
+  text-align: left;
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0d3950;
+}
+
+.faq-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.faq-toggle.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 0 15px;
+  line-height: 1.6;
+}
+
+.faq-answer ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.faq-answer li {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  color: #0d3950;
+  padding: 4px 0;
+}
+
+.faq-answer a {
+  color: #0d3950;
+}
+
+.faq-divider {
+  border: none;
+  border-top: 1px solid #0d3950;
+  margin: 0;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.footer-decoration {
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* --- RESPONSIVE: Desktop medium (max-width: 1100px) --- */
+@media (max-width: 1100px) {
+  .ceremony {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .event-body {
+    gap: 40px;
+  }
+
+  .info-date .p {
+    white-space: normal;
+  }
+}
+
+/* --- RESPONSIVE: Tablet (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Navbar: hamburger visible, links collapsed */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f1e8d5;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    max-height: 300px;
+    padding: 8px 20px 12px;
+  }
+
+  .nav-links li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(13, 57, 80, 0.1);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    font-size: 17px;
+  }
+
+  /* Typography */
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  /* Event layout: stack on tablet (dinner only) */
+  .event-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Ceremony keeps row layout on all screens, scales down */
+  .ceremony .event-body {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .ceremony .img-ceremony {
+    width: 45vw;
+  }
+
+  .ceremony .event-details {
+    font-size: 16px;
+  }
+
+  .ceremony .event-venue {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .ceremony .dress-code {
+    font-size: 16px;
+  }
+
+  .event-details {
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .ceremony {
+    padding: 10px 20px;
+  }
+
+  /* Columns (Travel): stack vertical */
+  .columns-container {
+    flex-direction: column;
+  }
+
+  /* Around Montalto */
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* --- RESPONSIVE: Mobile (max-width: 600px) --- */
+@media (max-width: 600px) {
+  /* Hero */
+  .inicio {
+    padding-top: 70px;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    font-size: 22px;
+  }
+
+  /* Typography */
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .info-date .p,
+  .event-venue {
+    font-size: 19px;
+    text-wrap: balance;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Dividers */
+  .divider-main {
+    margin-top: 58px;
+    margin-bottom: 25px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .divider-main .cornice-puffetti {
+    width: 180px;
+    height: 60px;
+  }
+
+  .divider-main img:nth-child(n + 3) {
+    display: none;
+  }
+
+  /* Titles */
+  .title-ceremony {
+    margin-top: 25px;
+  }
+
+  /* Event Layout */
+  .ceremony {
+    padding: 10px;
+  }
+
+  .img-ceremony {
+    width: 40vw;
+  }
+
+  .ceremony .event-details {
+    font-size: 14px;
+  }
+
+  .ceremony .event-venue {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .ceremony .dress-code {
+    font-size: 14px;
+  }
+
+  .ceremony .location-wrapper {
+    gap: 12px;
+  }
+
+  .address-row {
+    justify-content: center;
+  }
+
+  .event-venue,
+  .address-street {
+    margin-bottom: 15px;
+  }
+
+  .button-2 {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .location-wrapper {
+    gap: 15px;
+  }
+
+  .dress-code {
+    margin-top: 15px;
+  }
+
+  /* Around Montalto mobile */
+  .tab-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .recommendations-list li {
+    font-size: 16px;
+  }
+
+  .around-montalto-subtitle {
+    font-size: 18px;
+  }
+
+  /* Wedding Gifts mobile */
+  .wedding-gifts-img {
+    max-width: 200px;
+  }
+
+  /* RSVP mobile */
+  .wrapper-RSVP {
+    padding: 20px 16px;
+    max-width: 340px;
+  }
+
+  /* FAQ mobile */
+  .faq-toggle {
+    font-size: 18px;
+  }
+
+  .faq-answer li {
+    font-size: 16px;
+  }
+
+  .footer-decoration {
+    max-width: 250px;
+  }
+}
