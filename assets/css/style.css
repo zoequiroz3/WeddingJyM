@@ -445,11 +445,21 @@ p {
 /* --- TRAVEL SECTION --- */
 .travel {
   text-align: center;
+  padding-top: 50px;
 }
+
+.travel > .cornice-puffetti {
+  margin-bottom: 40px;
+}
+
+.travel > .title-weekend {
+  margin-bottom: 50px;
+}
+
 article.how-to-get-here {
   background: url("../img/htgh.png") no-repeat center / 100% 100%;
   padding: 40px 30px;
-  margin-top: 30px;
+  margin-top: 0;
   position: relative;
 }
 .columns-container {
@@ -472,6 +482,10 @@ img.how-to-get-here {
   height: auto;
   margin-bottom: 20px;
 }
+article.where-to-stay {
+  margin-top: 50px;
+}
+
 img.where-to-stay-2 {
   width: 100%;
   max-width: 700px;
