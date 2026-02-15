@@ -122,35 +122,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createHotelList() {
     if (hotelListContainer.innerHTML !== '') {
-      hotelListContainer.innerHTML = ''; // Clear existing list if any
+      hotelListContainer.innerHTML = '';
       return;
     }
 
-    const hotelList = document.createElement('div');
-    hotelList.classList.add('hotel-list-plain'); // A new class for the plain text list
+    const hotelGrid = document.createElement('div');
+    hotelGrid.classList.add('hotel-grid');
 
     hotels.forEach(hotel => {
-      const hotelBlock = document.createElement('div');
-      hotelBlock.classList.add('hotel-plain-item'); // A new class for each plain text hotel block
+      const card = document.createElement('div');
+      card.classList.add('hotel-card');
 
-      let htmlContent = `
-        <p><strong>${hotel.name}</strong></p>
-        <p><a href="http://${hotel.website}" target="_blank">${hotel.website}</a></p>
-        <p>${hotel.phone}</p>
+      let html = `
+        <p class="hotel-name">${hotel.name}</p>
+        <a class="hotel-link" href="http://${hotel.website}" target="_blank" rel="noopener noreferrer">${hotel.website}</a>
+        <a class="hotel-link" href="tel:${hotel.phone}">${hotel.phone}</a>
       `;
 
       if (hotel.email) {
-        htmlContent += `<p><a href="mailto:${hotel.email}">${hotel.email}</a></p>`;
+        html += `<a class="hotel-link" href="mailto:${hotel.email}">${hotel.email}</a>`;
       }
 
-      htmlContent += `<p>Distance from the venue: ${hotel.distance}</p>`;
-      htmlContent += `<br>`; // Add a line break for separation between hotels
+      html += `<p class="hotel-distance">${hotel.distance} from venue</p>`;
 
-      hotelBlock.innerHTML = htmlContent;
-      hotelList.appendChild(hotelBlock);
+      card.innerHTML = html;
+      hotelGrid.appendChild(card);
     });
 
-    hotelListContainer.appendChild(hotelList);
+    hotelListContainer.appendChild(hotelGrid);
   }
 
   viewHotelsLink.addEventListener('click', (e) => {
