@@ -591,6 +591,18 @@ img.where-to-stay-2 {
     margin: 15px 20px;
   }
 }
+
+/* Space between Click here and Around Montalto */
+.component {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .component {
+    margin-bottom: 30px;
+  }
+}
+
 .sub-heading {
   font-size: clamp(24px, 5vw, 40px);
   margin-bottom: 5px;
