@@ -1475,3 +1475,268 @@ img.where-to-stay-2 {
 .modal-content {
   cursor: default;
 }
+
+/* --- LOGIN OVERLAY --- */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f1e8d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.login-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Decorative corners - tamaño proporcional al boceto */
+.login-decoration {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: url("../img/esquinero.png") no-repeat center / contain;
+  pointer-events: none;
+}
+
+.login-decoration.top-left {
+  top: 5px;
+  left: 5px;
+  transform: rotate(0deg);
+}
+
+.login-decoration.top-right {
+  top: 5px;
+  right: 5px;
+  transform: rotate(90deg);
+}
+
+.login-decoration.bottom-left {
+  bottom: 5px;
+  left: 5px;
+  transform: rotate(-90deg);
+}
+
+.login-decoration.bottom-right {
+  bottom: 5px;
+  right: 5px;
+  transform: rotate(180deg);
+}
+
+/* Login content - según boceto */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 400px;
+  width: 90%;
+  padding: 40px 20px;
+  z-index: 1;
+}
+
+.login-logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.password-input {
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  padding: 12px 20px;
+  border: 2px solid #6fa1b6;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #0d3950;
+  background: white;
+  text-align: left;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.password-input:focus {
+  border-color: #0d3950;
+  box-shadow: 0 0 0 3px rgba(111, 161, 182, 0.3);
+}
+
+.password-input::placeholder {
+  color: #9ab3c0;
+  font-size: 15px;
+}
+
+.unlock-btn {
+  background: #0d3950;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.unlock-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.unlock-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #c0392b;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  margin-top: 8px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Desktop login styles */
+@media (min-width: 769px) {
+  .login-decoration {
+    width: 180px;
+    height: 180px;
+  }
+
+  .login-decoration.top-left {
+    top: 8px;
+    left: 8px;
+  }
+
+  .login-decoration.top-right {
+    top: 8px;
+    right: 8px;
+  }
+
+  .login-decoration.bottom-left {
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .login-decoration.bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .login-content {
+    max-width: 500px;
+    gap: 40px;
+  }
+
+  .login-logo {
+    max-width: 220px;
+  }
+
+  .password-input {
+    font-size: 18px;
+    padding: 14px 24px;
+    max-width: 320px;
+    min-width: 250px;
+  }
+
+  .unlock-btn {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+/* Mobile login adjustments - proporcional al boceto */
+@media (max-width: 480px) {
+  .login-decoration {
+    width: 100px;
+    height: 100px;
+  }
+
+  .login-decoration.top-left {
+    top: 3px;
+    left: 3px;
+  }
+
+  .login-decoration.top-right {
+    top: 3px;
+    right: 3px;
+  }
+
+  .login-decoration.bottom-left {
+    bottom: 3px;
+    left: 3px;
+  }
+
+  .login-decoration.bottom-right {
+    bottom: 3px;
+    right: 3px;
+  }
+
+  .login-content {
+    padding: 30px 20px;
+    gap: 25px;
+    max-width: 350px;
+  }
+
+  .login-logo {
+    max-width: 150px;
+  }
+
+  .login-form {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .password-input {
+    font-size: 15px;
+    padding: 12px 18px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #6fa1b6;
+    text-align: left;
+  }
+
+  .password-input::placeholder {
+    font-size: 14px;
+  }
+
+  .unlock-btn {
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+}

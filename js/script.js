@@ -332,4 +332,75 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- LOGIN FUNCTIONALITY ---
+  const loginOverlay = document.getElementById('login-overlay');
+  const passwordInput = document.getElementById('password-input');
+  const unlockBtn = document.getElementById('unlock-btn');
+  const errorMessage = document.getElementById('error-message');
+  
+  const CORRECT_PASSWORD = 'Montalto123';
+  const STORAGE_KEY = 'weddingAccessGranted';
+  
+  // Check if user is already logged in
+  function checkAccess() {
+    const isGranted = localStorage.getItem(STORAGE_KEY);
+    if (isGranted === 'true') {
+      hideLogin();
+    }
+  }
+  
+  // Hide login overlay
+  function hideLogin() {
+    if (loginOverlay) {
+      loginOverlay.classList.add('hidden');
+      setTimeout(() => {
+        loginOverlay.style.display = 'none';
+      }, 500);
+    }
+  }
+  
+  // Validate password
+  function validatePassword() {
+    const enteredPassword = passwordInput ? passwordInput.value.trim() : '';
+    
+    if (enteredPassword === CORRECT_PASSWORD) {
+      // Store access in localStorage
+      localStorage.setItem(STORAGE_KEY, 'true');
+      
+      // Hide error message
+      if (errorMessage) {
+        errorMessage.hidden = true;
+      }
+      
+      // Hide login
+      hideLogin();
+    } else {
+      // Show error message
+      if (errorMessage) {
+        errorMessage.hidden = false;
+      }
+      
+      // Clear input
+      if (passwordInput) {
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    }
+  }
+  
+  // Event listeners for login
+  if (unlockBtn && passwordInput) {
+    unlockBtn.addEventListener('click', validatePassword);
+    
+    // Allow Enter key to submit
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        validatePassword();
+      }
+    });
+  }
+  
+  // Check access on page load
+  checkAccess();
 });

@@ -24,6 +24,29 @@
     />
   </head>
   <body>
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+      <div class="login-decoration top-left"></div>
+      <div class="login-decoration top-right"></div>
+      <div class="login-decoration bottom-left"></div>
+      <div class="login-decoration bottom-right"></div>
+      
+      <div class="login-content">
+        <img class="login-logo" src="assets/img/logoJyM.png" alt="J&M Logo" />
+        <div class="login-form">
+          <input 
+            type="password" 
+            id="password-input" 
+            class="password-input" 
+            placeholder="Enter password"
+            autocomplete="off"
+          />
+          <button id="unlock-btn" class="unlock-btn">Unlock</button>
+        </div>
+        <p id="error-message" class="error-message" hidden>Incorrect password. Please try again.</p>
+      </div>
+    </div>
+
     <div class="landing-quicksand">
       <nav class="navbar">
         <a class="navbar-brand" href="#inicio">
