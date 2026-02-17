@@ -199,10 +199,13 @@
           </p>
           <form
             class="form"
-            action="YOUR_FORMSPREE_ENDPOINT_HERE"
+            action="https://formsubmit.co/zoequiroz03@gmail.com"
             method="POST"
             id="rsvp-form"
           >
+            <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <fieldset class="personal-fieldset">
               <legend class="fieldset-legend">Personal Information</legend>
               <div class="form-row">
@@ -345,8 +348,15 @@
               <button type="submit" class="button-2" id="rsvp-submit-btn">Submit</button>
             </div>
           </form>
-          <div id="rsvp-confirmation" class="rsvp-confirmation" hidden>
-            <p class="confirmation-message">Thank you! Your RSVP has been received.</p>
+          <!-- Modal de Confirmación -->
+          <div id="rsvp-modal" class="modal-overlay" hidden>
+            <div class="modal-content rectangular">
+              <img class="modal-dogs-img" src="assets/img/Cornice cani.png" alt="Two dogs with flowers decoration" />
+              <h3 class="modal-title">Thank you!</h3>
+              <p class="modal-message">Your RSVP has been successfully sent.</p>
+              <img class="modal-check-img" src="assets/img/comprobado (1).png" alt="Confirmation check" />
+              <button type="button" class="button-2 modal-close-btn" onclick="closeRSVPModal()">Close</button>
+            </div>
           </div>
         </div>
       </section>
@@ -371,25 +381,37 @@
                 />
               </div>
             </div>
-            <div class="column column-text">
+            <div class="column column-text-desktop">
               <p class="the-easiest-way-to">
-                The easiest way to reach Montalto di Castro from abroad is by
-                flying into Rome Fiumicino Airport (about 100 km away).
-                <br />Most international airlines have direct flights to
-                Fiumicino.
+                The easiest way to reach Montalto di Castro from abroad is by flying into Rome Fiumicino Airport (about 100 km away).
               </p>
-              <p class="text-wrapper-29">
+              <p class="airlines-text">
+                Most international airlines have direct flights to Fiumicino.
+              </p>
+              <p class="text-wrapper-29 desktop-only">
                 From the airport or from Rome, we strongly recommend renting a
                 car, as the area of Montalto does not have taxi services or
                 Uber.
               </p>
-              <p class="text-wrapper-28">
-                Montalto di Castro is also accessible by train from Rome, with a
-                local train station on the main coastal line. However, once in
-                town, transportation options are limited, so a car is still
-                recommended for getting around comfortably.
-              </p>
             </div>
+          </div>
+          <p class="airlines-text mobile-text">
+            Most international airlines have direct flights to Fiumicino.
+          </p>
+          <div class="text-second mobile-only">
+            <p class="text-wrapper-29">
+              From the airport or from Rome, we strongly recommend renting a
+              car, as the area of Montalto does not have taxi services or
+              Uber.
+            </p>
+          </div>
+          <div class="text-third">
+            <p class="text-wrapper-28">
+              Montalto di Castro is also accessible by train from Rome, with a
+              local train station on the main coastal line. However, once in
+              town, transportation options are limited, so a car is still
+              recommended for getting around comfortably.
+            </p>
           </div>
         </article>
         <article class="where-to-stay">

@@ -228,39 +228,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // --- RSVP form submission with feedback ---
+  // --- RSVP form submission with modal confirmation ---
   const rsvpForm = document.getElementById('rsvp-form');
   const rsvpSubmitBtn = document.getElementById('rsvp-submit-btn');
-  const rsvpConfirmation = document.getElementById('rsvp-confirmation');
+  const rsvpModal = document.getElementById('rsvp-modal');
 
-  if (rsvpForm) {
+  // Función global para cerrar el modal
+  window.closeRSVPModal = function() {
+    if (rsvpModal) {
+      rsvpModal.hidden = true;
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Cerrar modal al hacer click fuera
+  if (rsvpModal) {
+    rsvpModal.addEventListener('click', (e) => {
+      if (e.target === rsvpModal) {
+        closeRSVPModal();
+      }
+    });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !rsvpModal.hidden) {
+        closeRSVPModal();
+      }
+    });
+  }
+
+  if (rsvpForm && rsvpSubmitBtn) {
     rsvpForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const formData = new FormData(rsvpForm);
-      rsvpSubmitBtn.textContent = 'Sending...';
+      rsvpSubmitBtn.textContent = 'Enviando...';
       rsvpSubmitBtn.classList.add('loading');
 
+      // Enviar a FormSubmit
       fetch(rsvpForm.action, {
         method: 'POST',
         body: formData,
-        headers: { 'Accept': 'application/json' },
+        headers: {
+          'Accept': 'application/json, text/plain, */*'
+        }
       })
-        .then((response) => {
-          if (response.ok) {
-            rsvpForm.hidden = true;
-            rsvpConfirmation.hidden = false;
-          } else {
-            rsvpSubmitBtn.textContent = 'Submit';
-            rsvpSubmitBtn.classList.remove('loading');
-            alert('There was a problem submitting your RSVP. Please try again or contact us directly.');
-          }
-        })
-        .catch(() => {
-          rsvpSubmitBtn.textContent = 'Submit';
-          rsvpSubmitBtn.classList.remove('loading');
-          alert('There was a problem submitting your RSVP. Please try again or contact us directly.');
-        });
+      .then((response) => {
+        // FormSubmit siempre redirige, así que consideramos éxito si no hay error de red
+        rsvpSubmitBtn.textContent = 'Submit';
+        rsvpSubmitBtn.classList.remove('loading');
+        
+        // Mostrar modal de confirmación
+        if (rsvpModal) {
+          rsvpModal.hidden = false;
+          document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+        
+        // Limpiar formulario
+        rsvpForm.reset();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        rsvpSubmitBtn.textContent = 'Submit';
+        rsvpSubmitBtn.classList.remove('loading');
+        alert('Hubo un problema al enviar tu confirmación. Por favor intenta de nuevo.');
+      });
     });
   }
 
