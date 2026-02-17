@@ -155,6 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
   viewHotelsLink.addEventListener('click', (e) => {
     e.preventDefault();
     createHotelList();
+    
+    // Toggle text between "view hotels" and "hide details"
+    const togglePrefix = document.querySelector('.toggle-prefix');
+    const toggleSuffix = document.querySelector('.toggle-suffix');
+    const isShowing = hotelListContainer.innerHTML !== '';
+    
+    if (isShowing) {
+      togglePrefix.textContent = 'Click ';
+      toggleSuffix.textContent = ' to hide details';
+    } else {
+      togglePrefix.textContent = 'Click ';
+      toggleSuffix.textContent = ' to view hotels';
+    }
   });
 
   // --- Tab switching (Around Montalto) ---

@@ -570,6 +570,11 @@ img.where-to-stay-2 {
   margin: 20px 0;
 }
 
+/* Click here to view hotels link */
+#view-hotels-link {
+  color: #0d3950;
+}
+
 .book-early-notice {
   background: url("../img/Vector.png") no-repeat center / 100% 100%;
   padding: 10px 25px;
@@ -1298,6 +1303,7 @@ img.where-to-stay-2 {
   article.where-to-stay {
     margin-top: 40px;
     text-align: center;
+    padding: 0 30px;
   }
 
   article.where-to-stay h3 {
