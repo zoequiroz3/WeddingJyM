@@ -527,13 +527,18 @@ article.how-to-get-here .columns-container {
 .airlines-text {
   text-align: center;
   margin-top: 8px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .the-easiest-way-to,
 .text-wrapper-29,
 .text-wrapper-28 {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.text-wrapper-29 {
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .mobile-only,
@@ -1271,6 +1276,11 @@ img.where-to-stay-2 {
   .mobile-only p {
     text-align: center;
     font-size: 16px;
+  }
+
+  .text-wrapper-29 {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .text-third {
