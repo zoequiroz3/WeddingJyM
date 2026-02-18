@@ -189,6 +189,10 @@ p {
   font-size: 30px;
 }
 
+.hero-title {
+  margin-bottom: 15px;
+}
+
 /* --- DIVIDERS (Flores) --- */
 .division {
   display: flex;
