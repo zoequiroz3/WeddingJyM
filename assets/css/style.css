@@ -886,6 +886,38 @@ img.where-to-stay-2 {
   margin-bottom: 0;
 }
 
+.registry-intro {
+  max-width: 500px;
+  margin: 30px auto 15px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Source Sans 3", sans-serif;
+  color: #0d3950;
+}
+
+.registry-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Source Sans 3", sans-serif;
+  color: #0d3950;
+}
+
+.registry-list li {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 6px 0;
+  line-height: 1.4;
+  text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+  color: #0d3950;
+}
+
 @media (min-width: 769px) {
   .wedding-gifts {
     padding: 60px 40px;
@@ -1481,6 +1513,11 @@ img.where-to-stay-2 {
   /* Wedding Gifts mobile */
   .wedding-gifts-img {
     max-width: 200px;
+  }
+
+  .registry-intro,
+  .registry-list li {
+    font-size: 20px;
   }
 
   /* RSVP mobile - espaciado original */
