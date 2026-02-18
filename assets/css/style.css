@@ -648,6 +648,11 @@ img.where-to-stay-2 {
 /* Click here to view hotels link */
 #view-hotels-link {
   color: #0d3950;
+  font-weight: bold;
+}
+
+.text-wrapper-31 {
+  font-weight: bold;
 }
 
 .book-early-notice {

@@ -1,31 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hotels = [
     {
-      name: 'Argentario Golf Resort & SPA - Argentario',
-      website: 'www.argentariogolfresortspa.it',
-      phone: '+39 0564 810292',
-      distance: '40 minutes',
-    },
-    {
-      name: 'Il Pellicano - Argentario',
-      website: 'www.pellicanohotel.com',
-      phone: '+39 0564 858111',
-      email: 'reservations@pellicanohotels.com',
-      distance: '50 minutes',
-    },
-    {
       name: 'Hotel Vulci - Montalto di Castro',
       website: 'www.hotelvulci.it',
       phone: '+39 350 0822605',
       email: 'vulci@hotelvulci.it',
       distance: '9 minutes',
-    },
-    {
-      name: 'Hotel Enterprise - Montalto Marina',
-      website: 'www.hotelenterprise.it',
-      phone: '+39 371 6982856',
-      email: 'mail@hotelenterprise.it',
-      distance: '15 minutes',
     },
     {
       name: 'Casale La Rovere - Montalto di Castro',
@@ -35,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
       distance: '12 minutes',
     },
     {
-      name: 'Terme Di Vulci Glamping & Spa - Vulci',
-      website: 'www.termedivulci.com',
-      phone: '+39 0761 1917529',
-      email: 'prenotazioni@termedivulci.com',
-      distance: '26 minutes',
+      name: 'Hotel Enterprise - Montalto Marina',
+      website: 'www.hotelenterprise.it',
+      phone: '+39 371 6982856',
+      email: 'mail@hotelenterprise.it',
+      distance: '15 minutes',
     },
     {
       name: 'Piani Degli Alpaca - Tarquinia',
@@ -47,12 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       phone: '+39 329.9517042',
       email: 'info@pianideglialpaca.it',
       distance: '16 minutes',
-    },
-    {
-      name: 'Olympia Resort & Spa - Tarquinia',
-      website: 'www.olympiaresortespa.com',
-      phone: '+39 345 3469352',
-      distance: '25 minutes',
     },
     {
       name: 'Podere Giulio - Tarquinia',
@@ -88,6 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
       distance: '24 minutes',
     },
     {
+      name: 'Olympia Resort & Spa - Tarquinia',
+      website: 'www.olympiaresortespa.com',
+      phone: '+39 345 3469352',
+      distance: '25 minutes',
+    },
+    {
+      name: 'Glamping Terre di Sacra - Capalbio',
+      website: 'www.sacra.it',
+      phone: '+39 0564 890101',
+      email: 'crm@campingcapalbio.it',
+      distance: '25 minutes',
+    },
+    {
+      name: 'Terme Di Vulci Glamping & Spa - Vulci',
+      website: 'www.termedivulci.com',
+      phone: '+39 0761 1917529',
+      email: 'prenotazioni@termedivulci.com',
+      distance: '26 minutes',
+    },
+    {
       name: 'Locanda Rossa - Capalbio',
       website: 'www.locandarossa.com',
       phone: '+39 0564 890462',
@@ -102,11 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
       distance: '30 minutes',
     },
     {
-      name: 'Glamping Terre di Sacra - Capalbio',
-      website: 'www.sacra.it',
-      phone: '+39 0564 890101',
-      email: 'crm@campingcapalbio.it',
-      distance: '25 minutes',
+      name: 'Argentario Golf Resort & SPA - Argentario',
+      website: 'www.argentariogolfresortspa.it',
+      phone: '+39 0564 810292',
+      distance: '40 minutes',
     },
     {
       name: 'La Parrina - Albinia',
@@ -114,6 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
       phone: '+39 331.7544169',
       email: 'agriturismo@parrina.it',
       distance: '40 minutes',
+    },
+    {
+      name: 'Il Pellicano - Argentario',
+      website: 'www.pellicanohotel.com',
+      phone: '+39 0564 858111',
+      email: 'reservations@pellicanohotels.com',
+      distance: '50 minutes',
     },
   ];
 
