@@ -229,6 +229,17 @@ p {
   max-width: 1050px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 15px;
+}
+
+.cocktail-and-dinner .event-venue {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.cocktail-and-dinner .title-weekend {
+  margin-bottom: 25px;
 }
 
 /* Ocultar fecha mobile en desktop */
@@ -243,6 +254,12 @@ p {
 
 /* Espacio extra para la primera división */
 .divider-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* División después de ceremony */
+.ceremony + .division {
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -265,7 +282,7 @@ p {
 .title-weekend {
   font-size: clamp(24px, 6vw, 60px);
   font-weight: normal;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .info-wedding {
@@ -327,6 +344,7 @@ p {
 
 .event-venue {
   font-size: 28px;
+  margin-top: 20px;
   margin-bottom: 45px; /* AUMENTADO: Esto baja la ubicación y el botón */
   line-height: 1.2;
 }
@@ -1393,6 +1411,25 @@ img.where-to-stay-2 {
     width: 16px;
     margin-top: 3px;
     flex-shrink: 0;
+  }
+
+  /* Aplicar mismos tamaños de fuente a Cocktail and Dinner */
+  .cocktail-and-dinner .event-details {
+    font-size: 14px;
+  }
+
+  .cocktail-and-dinner .event-venue {
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .cocktail-and-dinner .address-street {
+    font-size: 15px;
+  }
+
+  .cocktail-and-dinner .address-city {
+    font-size: 15px;
   }
 
   .location-wrapper {
