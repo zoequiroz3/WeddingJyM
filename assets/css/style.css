@@ -243,8 +243,8 @@ p {
 
 /* Espacio extra para la primera división */
 .divider-main {
-  margin-top: 80px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* Dresscode en una sola línea en desktop */
@@ -975,6 +975,20 @@ img.where-to-stay-2 {
   width: 95%;
   max-width: 100%;
   overflow: hidden;
+}
+
+/* Ocultar flores en guirnaldas largas para que no hagan wrap */
+@media (max-width: 1200px) {
+  .divider-main .cornice-puffetti:nth-last-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .divider-main .cornice-puffetti:nth-last-child(1),
+  .divider-main .cornice-puffetti:nth-last-child(2) {
+    display: none;
+  }
 }
 
 /* --- RESPONSIVE: Desktop medium (max-width: 1100px) --- */
