@@ -951,7 +951,7 @@ img.where-to-stay-2 {
 /* --- FAQ SECTION --- */
 .faq-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 0 20px 40px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -959,7 +959,7 @@ img.where-to-stay-2 {
 .faq-header-img {
   max-width: 250px;
   height: auto;
-  margin: 0 auto 20px;
+  margin: 0 auto 80px;
   display: block;
 }
 
