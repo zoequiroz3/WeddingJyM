@@ -89,11 +89,25 @@ p {
   font-weight: 500;
   color: #0d3950;
   transition: opacity 0.2s;
+  padding: 6px 12px;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
   opacity: 0.8;
+}
+
+.nav-links a.rsvp-link {
+  color: #0d3950;
+  font-weight: 600;
+}
+
+.nav-links a.rsvp-link:hover {
+  text-decoration: none;
+  opacity: 1;
+  background-color: #0d3950;
+  color: #f1e8d5;
+  border-radius: 4px;
 }
 
 .hamburger {
@@ -1015,6 +1029,12 @@ img.where-to-stay-2 {
     font-size: 17px;
   }
 
+  .nav-links a.rsvp-link {
+    background-color: #0d3950;
+    color: #f1e8d5;
+    border-radius: 4px;
+  }
+
   /* Typography */
   p {
     font-size: 20px;
@@ -1075,7 +1095,7 @@ img.where-to-stay-2 {
   }
 
   .tab-button {
-    padding: 8px 16px;
+    padding: 6px 12px;
     font-size: 16px;
   }
 
