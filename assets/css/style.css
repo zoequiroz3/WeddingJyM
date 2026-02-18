@@ -162,7 +162,7 @@ p {
 }
 
 .location-wrapper .button-2 {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 /* --- HERO SECTION --- */
@@ -284,8 +284,8 @@ p {
 .event-details {
   display: flex;
   flex-direction: column;
-  /* Esto distribuye: Fecha (arriba), Wrapper (centro), Dresscode (abajo) */
-  justify-content: space-between; 
+  /* Acerca los elementos al centro sin afectar gaps internos */
+  justify-content: center;
   align-items: center; /* ¡CRUCIAL! Esto evita que el botón se estire al 100% */
   text-align: center; 
   width: 100%;
@@ -293,6 +293,7 @@ p {
 
 .info-date {
   width: 100%;
+  margin-bottom: 80px;
 }
 
 .location-wrapper {
@@ -301,7 +302,6 @@ p {
   justify-content: center; /* Centra verticalmente este bloque */
   align-items: center;     /* Centra horizontalmente el contenido (incluido el botón) */
   gap: 25px;               /* Espacio entre Iglesia, Dirección y Botón */
-  flex-grow: 1;            /* Ocupa el espacio sobrante en el medio */
 }
 
 /* Event Images */
@@ -332,10 +332,15 @@ p {
 }
 
 .dress-code {
-  margin-top: 0;
+  margin-top: 25px;
   padding-bottom: 5px;
   font-size: 20px;
   width: 100%;
+}
+
+/* Desktop: dresscode más arriba */
+.ceremony .dress-code {
+  margin-top: 25px;
 }
 
 .address-row {
@@ -1091,7 +1096,7 @@ img.where-to-stay-2 {
 
   .event-details {
     height: auto;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .ceremony {
