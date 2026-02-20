@@ -98,16 +98,17 @@ p {
 }
 
 .nav-links a.rsvp-link {
-  color: #0d3950;
+  color: #f1e8d5;
   font-weight: 600;
+  background-color: #0d3950;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 .nav-links a.rsvp-link:hover {
   text-decoration: none;
   opacity: 1;
-  background-color: #0d3950;
-  color: #f1e8d5;
-  border-radius: 4px;
+  background-color: #1a4a63;
 }
 
 .hamburger {
@@ -1519,9 +1520,13 @@ img.where-to-stay-2 {
     max-width: 200px;
   }
 
-  .registry-intro,
+  .registry-intro {
+    font-size: 18px;
+    margin: 20px auto 10px;
+  }
+
   .registry-list li {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   /* RSVP mobile - espaciado original */
