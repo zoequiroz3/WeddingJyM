@@ -396,7 +396,17 @@ document.addEventListener('DOMContentLoaded', () => {
       rsvpForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        // Honeypot anti-spam check: if this hidden field is filled, it's a bot
+        const honeypot = rsvpForm.querySelector('input[name="website"]');
+        if (honeypot && honeypot.value) {
+          // Silently fake success so the bot thinks it worked
+          rsvpForm.reset();
+          return;
+        }
+
         const formData = new FormData(rsvpForm);
+        // Remove honeypot field from submission
+        formData.delete('website');
         rsvpSubmitBtn.textContent = 'Enviando...';
         rsvpSubmitBtn.classList.add('loading');
 

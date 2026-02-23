@@ -172,6 +172,11 @@
           <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <!-- Honeypot anti-spam field (hidden from humans, bots fill it) -->
+          <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <fieldset class="personal-fieldset">
             <legend class="fieldset-legend">Personal Information</legend>
             <div class="form-row">
