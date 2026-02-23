@@ -1,499 +1,356 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>Wedding Invitation - Joaquin & Marita</title>
-    <meta name="description" content="Join us for the wedding of Joaquin & Marita on July 11th, 2026 in Montalto di Castro, Italy." />
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Joaquin & Marita - Wedding Invitation" />
-    <meta property="og:description" content="Join us for our wedding celebration on July 11th, 2026 in Montalto di Castro, Italy." />
-    <meta property="og:image" content="assets/img/Header-orizz.png" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>Wedding Invitation - Joaquin & Marita</title>
+  <meta name="description"
+    content="Join us for the wedding of Joaquin & Marita on July 11th, 2026 in Montalto di Castro, Italy." />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/logoJyM.png" />
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Joaquin & Marita - Wedding Invitation" />
+  <meta property="og:description"
+    content="Join us for our wedding celebration on July 11th, 2026 in Montalto di Castro, Italy." />
+  <meta property="og:image" content="assets/img/Header-orizz.png" />
+  <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Login Overlay -->
-    <div id="login-overlay" class="login-overlay">
-      <div class="login-decoration top-left"></div>
-      <div class="login-decoration top-right"></div>
-      <div class="login-decoration bottom-left"></div>
-      <div class="login-decoration bottom-right"></div>
-      
-      <div class="login-content">
-        <img class="login-logo" src="assets/img/logoJyM.png" alt="J&M Logo" />
-        <div class="login-form">
-          <input 
-            type="password" 
-            id="password-input" 
-            class="password-input" 
-            placeholder="Enter password"
-            autocomplete="off"
-          />
-          <button id="unlock-btn" class="unlock-btn">Unlock</button>
-        </div>
-        <p id="error-message" class="error-message" hidden>Incorrect password. Please try again.</p>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logoJyM.png" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Login Overlay -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-decoration top-left"></div>
+    <div class="login-decoration top-right"></div>
+    <div class="login-decoration bottom-left"></div>
+    <div class="login-decoration bottom-right"></div>
+
+    <div class="login-content">
+      <img class="login-logo" src="assets/img/logoJyM.png" alt="J&M Logo" />
+      <div class="login-form">
+        <input type="password" id="password-input" class="password-input" placeholder="Enter password"
+          autocomplete="off" />
+        <button id="unlock-btn" class="unlock-btn">Unlock</button>
       </div>
+      <p id="error-message" class="error-message" hidden>Incorrect password. Please try again.</p>
     </div>
+  </div>
 
-    <div class="landing-quicksand">
-      <nav class="navbar">
-        <a class="navbar-brand" href="#inicio">
-          <img
-            class="img-logo-nav"
-            src="./assets/img/logoJyM.png"
-            alt="Logo JyM"
-          />
-        </a>
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="#ceremony">The Weekend</a></li>
-          <li><a href="#rsvp" class="rsvp-link">RSVP</a></li>
-          <li><a href="#travel">Travel</a></li>
-          <li><a href="#gifts">Gifts</a></li>
-        </ul>
-      </nav>
+  <div class="landing-quicksand">
+    <nav class="navbar">
+      <a class="navbar-brand" href="#inicio">
+        <img class="img-logo-nav" src="./assets/img/logoJyM.png" alt="Logo JyM" />
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#ceremony">The Weekend</a></li>
+        <li><a href="#rsvp" class="rsvp-link">RSVP</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#gifts">Gifts</a></li>
+      </ul>
+    </nav>
 
-      <section class="inicio" id="inicio">
-        <div class="imagen-inicio">
-          <picture>
-            <source
-              srcset="assets/img/Header-orizz.png"
-              media="(min-width: 601px)"
-            />
-            <img
-              class="img-sitio"
-              src="assets/img/Header sito.png"
-              alt="Wedding header illustration"
-            />
-          </picture>
-        </div>
+    <section class="inicio" id="inicio">
+      <div class="imagen-inicio">
+        <picture>
+          <source srcset="assets/img/Header-orizz.png" media="(min-width: 601px)" />
+          <img class="img-sitio" src="assets/img/Header sito.png" alt="Wedding header illustration" />
+        </picture>
+      </div>
 
-        <div class="titulos-inicio">
-          <h1 class="hero-title">11th of July 2026</h1>
-          <h1 class="hero-subtitle">Montalto di Castro</h1>
-        </div>
-      </section>
+      <div class="titulos-inicio">
+        <h1 class="hero-title">11th of July 2026</h1>
+        <h1 class="hero-subtitle">Montalto di Castro</h1>
+      </div>
+    </section>
 
-      <section class="the-weekend">
-        <div class="division divider-main">
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-        </div>
+    <section class="the-weekend">
+      <div class="division divider-main">
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      </div>
 
-        <article class="event-section ceremony" id="ceremony">
-            <div class="title-container">
-              <h2 class="title-weekend">Wedding Ceremony</h2>
-              <div class="info-date">
-                <p class="p">Saturday 11th of July 2026 at 17h</p>
-              </div>
-            </div>
-
-            <div class="event-body">
-              <div class="img-container">
-                <img class="img-event img-ceremony" src="assets/img/Chiesa.png" alt="Chiesa di Santa Maria Assunta" loading="lazy" />
-              </div>
-
-              <div class="event-details text-ceremony-align">
-                  <div class="info-date desktop-only">
-                    <p class="p">Saturday 11th of July 2026 at 17h</p>
-                  </div>
-                  
-                  <div class="location-wrapper">
-                      <p class="event-venue p">Chiesa di Santa Maria Assunta</p>
-                      
-                      <div class="address-row">
-                        <img class="location-pin" src="assets/img/pasador-de-ubicacion.png" alt="Location pin" />
-                        <div class="address-text-block">
-                          <p class="address-street">Via S. Paolo della Croce, 3</p>
-                          <p class="address-city">Montalto di Castro</p>
-                        </div>
-                      </div>
-
-                      <a href="https://maps.google.com/?q=Chiesa+di+Santa+Maria+Assunta,+Via+S.+Paolo+della+Croce+3,+Montalto+di+Castro" target="_blank" rel="noopener noreferrer" class="button-2">Directions</a>
-                  </div>
-                
-                  <p class="dress-code">Dress code:<br> Formal attire – blue suit</p>
-              </div>
-            </div>
-        </article>
-
-        <div class="division">
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-          <img
-            class="cornice-puffetti"
-            src="assets/img/Cornice puffetti e querce.png"
-            alt="Decorative floral border"
-          />
-        </div>
-
-        <article class="event-section cocktail-and-dinner" id="cocktail">
-          <div class="title-container">
-            <h2 class="title-weekend">Cocktail and Dinner Party</h2>
-            <p class="p">Saturday 11th of July 2026 at 18.30h</p>
+      <article class="event-section ceremony" id="ceremony">
+        <div class="title-container">
+          <h2 class="title-weekend">Wedding Ceremony</h2>
+          <div class="info-date">
+            <p class="p">Saturday 11th of July 2026 at 17h</p>
           </div>
+        </div>
+
+        <div class="event-body">
           <div class="img-container">
-            <img
-              class="img-event img-dinner"
-              src="assets/img/Ceremony - Villa senza cielo .png"
-              alt="La Rovere venue"
-              loading="lazy"
-            />
+            <img class="img-event img-ceremony" src="assets/img/Chiesa.png" alt="Chiesa di Santa Maria Assunta"
+              loading="lazy" />
           </div>
 
-          <div class="event-details">
+          <div class="event-details text-ceremony-align">
+            <div class="info-date desktop-only">
+              <p class="p">Saturday 11th of July 2026 at 17h</p>
+            </div>
+
             <div class="location-wrapper">
-              <p class="event-venue p">La Rovere</p>
+              <p class="event-venue p">Chiesa di Santa Maria Assunta</p>
 
               <div class="address-row">
-                <img
-                  class="location-pin"
-                  src="assets/img/pasador-de-ubicacion.png"
-                  alt="Location pin"
-                />
+                <img class="location-pin" src="assets/img/pasador-de-ubicacion.png" alt="Location pin" />
                 <div class="address-text-block">
-                  <p class="address-street">Strada della Ramata, 1</p>
+                  <p class="address-street">Via S. Paolo della Croce, 3</p>
                   <p class="address-city">Montalto di Castro</p>
                 </div>
               </div>
 
-              <a
-                href="https://maps.google.com/?q=La+Rovere,+Strada+della+Ramata+1,+Montalto+di+Castro"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button-2"
-                >Directions</a
-              >
+              <a href="https://maps.google.com/?q=Chiesa+di+Santa+Maria+Assunta,+Via+S.+Paolo+della+Croce+3,+Montalto+di+Castro"
+                target="_blank" rel="noopener noreferrer" class="button-2">Directions</a>
             </div>
-          </div>
-        </article>
-      </section>
 
-      <section class="RSVP" id="rsvp">
-        <div class="wrapper-RSVP">
-          <h2 class="title-weekend">RSVP</h2>
-          <p class="form-italic-title">
-            Please provide the following information
-          </p>
-          <form
-            class="form"
-            action="https://formsubmit.co/zoequiroz03@gmail.com"
-            method="POST"
-            id="rsvp-form"
-          >
-            <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <fieldset class="personal-fieldset">
-              <legend class="fieldset-legend">Personal Information</legend>
-              <div class="form-row">
-                <div class="input-wrapper">
-                  <label class="input-label" for="name">Name <span class="required-star">*</span></label>
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="name"
-                    name="first_name"
-                    placeholder="Enter your first name"
-                    required
-                  />
-                </div>
-                <div class="input-wrapper">
-                  <label class="input-label" for="surname">Surname <span class="required-star">*</span></label>
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="surname"
-                    name="last_name"
-                    placeholder="Enter your last name"
-                    required
-                  />
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="address-fieldset">
-              <legend class="fieldset-legend">Address</legend>
-              <div class="input-wrapper">
-                <label class="input-label" for="street">Street <span class="required-star">*</span></label>
-                <input
-                  class="input-field"
-                  type="text"
-                  id="street"
-                  name="street"
-                  placeholder="Enter your street name and number"
-                  required
-                />
-              </div>
-              <div class="form-row">
-                <div class="input-wrapper">
-                  <label class="input-label" for="city">City <span class="required-star">*</span></label>
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="city"
-                    name="city"
-                    placeholder="Enter your city"
-                    required
-                  />
-                </div>
-                <div class="input-wrapper">
-                  <label class="input-label" for="postal-code">Postal Code <span class="required-star">*</span></label>
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="postal-code"
-                    name="postal_code"
-                    placeholder="Enter your postal code"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="input-wrapper">
-                  <label class="input-label" for="province"
-                    >Province/Region <span class="required-star">*</span></label
-                  >
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="province"
-                    name="province_region"
-                    placeholder="Enter your State or region"
-                    required
-                  />
-                </div>
-                <div class="input-wrapper">
-                  <label class="input-label" for="country">Country <span class="required-star">*</span></label>
-                  <input
-                    class="input-field"
-                    type="text"
-                    id="country"
-                    name="country"
-                    placeholder="Enter your country"
-                    required
-                  />
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="attendance-fieldset">
-              <legend class="fieldset-legend">
-                Will you be attending? <span class="required-star">*</span>
-              </legend>
-              <div class="radio-options-container">
-                <div class="radio-option">
-                  <input
-                    type="radio"
-                    id="attending-yes"
-                    name="attending"
-                    value="yes"
-                    class="radio-input"
-                    required
-                  />
-                  <label for="attending-yes">Yes</label>
-                </div>
-                <div class="radio-option">
-                  <input
-                    type="radio"
-                    id="attending-no"
-                    name="attending"
-                    value="no"
-                    class="radio-input"
-                    required
-                  />
-                  <label for="attending-no">No</label>
-                </div>
-              </div>
-            </fieldset>
-            <div class="input-wrapper">
-              <label
-                for="food-restrictions"
-                class="fieldset-legend"
-                >Food restrictions</label
-              >
-              <p class="text-wrapper-21">
-                Please let us know if you have any food restrictions or
-                allergies we should be aware of
-              </p>
-              <textarea
-                class="input-field"
-                id="food-restrictions"
-                name="food-restrictions"
-                placeholder="e.g. Vegetarian, gluten-free, peanut allergy..."
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="submit-button-container">
-              <button type="submit" class="button-2" id="rsvp-submit-btn">Submit</button>
-            </div>
-          </form>
-          <!-- Modal de Confirmación -->
-          <div id="rsvp-modal" class="modal-overlay" hidden>
-            <div class="modal-content rectangular">
-              <img class="modal-dogs-img" src="assets/img/Cornice cani.png" alt="Two dogs with flowers decoration" />
-              <h3 class="modal-title">Thank you!</h3>
-              <p class="modal-message">Your RSVP has been successfully sent.</p>
-              <img class="modal-check-img" src="assets/img/comprobado (1).png" alt="Confirmation check" />
-              <button type="button" class="button-2 modal-close-btn" onclick="closeRSVPModal()">Close</button>
-            </div>
+            <p class="dress-code">Dress code:<br> Formal attire – blue suit</p>
           </div>
         </div>
-      </section>
+      </article>
 
-      <section class="travel" id="travel" aria-labelledby="travel-heading">
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
-        <h2 id="travel-heading" class="title-weekend">TRAVELING TO MONTALTO</h2>
-        <article class="how-to-get-here">
-          <h3 class="sub-heading">How to get here</h3>
-          <div class="columns-container">
-            <div class="column column-image">
-              <div class="img-container">
-                <img
-                  class="how-to-get-here"
-                  src="assets/img/How to get here .png"
-                  alt="Airport illustration"
-                  loading="lazy"
-                />
+      <div class="division">
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+        <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      </div>
+
+      <article class="event-section cocktail-and-dinner" id="cocktail">
+        <div class="title-container">
+          <h2 class="title-weekend">Cocktail and Dinner Party</h2>
+          <p class="p">Saturday 11th of July 2026 at 18.30h</p>
+        </div>
+        <div class="img-container">
+          <img class="img-event img-dinner" src="assets/img/Ceremony - Villa senza cielo .png" alt="La Rovere venue"
+            loading="lazy" />
+        </div>
+
+        <div class="event-details">
+          <div class="location-wrapper">
+            <p class="event-venue p">La Rovere</p>
+
+            <div class="address-row">
+              <img class="location-pin" src="assets/img/pasador-de-ubicacion.png" alt="Location pin" />
+              <div class="address-text-block">
+                <p class="address-street">Strada della Ramata, 1</p>
+                <p class="address-city">Montalto di Castro</p>
               </div>
             </div>
-            <div class="column column-text-desktop">
-              <p class="the-easiest-way-to">
-                The easiest way to reach Montalto di Castro from abroad is by flying into Rome Fiumicino Airport (about 100 km away).
-              </p>
-              <p class="airlines-text">
-                Most international airlines have direct flights to Fiumicino.
-              </p>
-              <p class="text-wrapper-29 desktop-only">
-                From the airport or from Rome, we strongly recommend renting a
-                car, as the area of Montalto does not have taxi services or
-                Uber.
-              </p>
+
+            <a href="https://maps.google.com/?q=La+Rovere,+Strada+della+Ramata+1,+Montalto+di+Castro" target="_blank"
+              rel="noopener noreferrer" class="button-2">Directions</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="RSVP" id="rsvp">
+      <div class="wrapper-RSVP">
+        <h2 class="title-weekend">RSVP</h2>
+        <p class="form-italic-title">
+          Please provide the following information
+        </p>
+        <form class="form" action="https://formsubmit.co/zoequiroz03@gmail.com" method="POST" id="rsvp-form">
+          <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <fieldset class="personal-fieldset">
+            <legend class="fieldset-legend">Personal Information</legend>
+            <div class="form-row">
+              <div class="input-wrapper">
+                <label class="input-label" for="name">Name <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="name" name="first_name" placeholder="Enter your first name"
+                  required />
+              </div>
+              <div class="input-wrapper">
+                <label class="input-label" for="surname">Surname <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="surname" name="last_name" placeholder="Enter your last name"
+                  required />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="address-fieldset">
+            <legend class="fieldset-legend">Address</legend>
+            <div class="input-wrapper">
+              <label class="input-label" for="street">Street <span class="required-star">*</span></label>
+              <input class="input-field" type="text" id="street" name="street"
+                placeholder="Enter your street name and number" required />
+            </div>
+            <div class="form-row">
+              <div class="input-wrapper">
+                <label class="input-label" for="city">City <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="city" name="city" placeholder="Enter your city" required />
+              </div>
+              <div class="input-wrapper">
+                <label class="input-label" for="postal-code">Postal Code <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="postal-code" name="postal_code"
+                  placeholder="Enter your postal code" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-wrapper">
+                <label class="input-label" for="province">Province/Region <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="province" name="province_region"
+                  placeholder="Enter your State or region" required />
+              </div>
+              <div class="input-wrapper">
+                <label class="input-label" for="country">Country <span class="required-star">*</span></label>
+                <input class="input-field" type="text" id="country" name="country" placeholder="Enter your country"
+                  required />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="attendance-fieldset">
+            <legend class="fieldset-legend">
+              Will you be attending? <span class="required-star">*</span>
+            </legend>
+            <div class="radio-options-container">
+              <div class="radio-option">
+                <input type="radio" id="attending-yes" name="attending" value="yes" class="radio-input" required />
+                <label for="attending-yes">Yes</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="attending-no" name="attending" value="no" class="radio-input" required />
+                <label for="attending-no">No</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="input-wrapper">
+            <label for="food-restrictions" class="fieldset-legend">Food restrictions</label>
+            <p class="text-wrapper-21">
+              Please let us know if you have any food restrictions or
+              allergies we should be aware of
+            </p>
+            <textarea class="input-field" id="food-restrictions" name="food-restrictions"
+              placeholder="e.g. Vegetarian, gluten-free, peanut allergy..." rows="4"></textarea>
+          </div>
+          <div class="submit-button-container">
+            <button type="submit" class="button-2" id="rsvp-submit-btn">Submit</button>
+          </div>
+        </form>
+        <!-- Modal de Confirmación -->
+        <div id="rsvp-modal" class="modal-overlay" hidden>
+          <div class="modal-content rectangular">
+            <img class="modal-dogs-img" src="assets/img/Cornice cani.png" alt="Two dogs with flowers decoration" />
+            <h3 class="modal-title">Thank you!</h3>
+            <p class="modal-message">Your RSVP has been successfully sent.</p>
+            <img class="modal-check-img" src="assets/img/comprobado (1).png" alt="Confirmation check" />
+            <button type="button" class="button-2 modal-close-btn" onclick="closeRSVPModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="travel" id="travel" aria-labelledby="travel-heading">
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      <h2 id="travel-heading" class="title-weekend">TRAVELING TO MONTALTO</h2>
+      <article class="how-to-get-here">
+        <h3 class="sub-heading">How to get here</h3>
+        <div class="columns-container">
+          <div class="column column-image">
+            <div class="img-container">
+              <img class="how-to-get-here" src="assets/img/How to get here .png" alt="Airport illustration"
+                loading="lazy" />
             </div>
           </div>
-          <p class="airlines-text mobile-text">
-            Most international airlines have direct flights to Fiumicino.
-          </p>
-          <div class="text-second mobile-only">
-            <p class="text-wrapper-29">
+          <div class="column column-text-desktop">
+            <p class="the-easiest-way-to">
+              The easiest way to reach Montalto di Castro from abroad is by flying into Rome Fiumicino Airport (about
+              100 km away).
+            </p>
+            <p class="airlines-text">
+              Most international airlines have direct flights to Fiumicino.
+            </p>
+            <p class="text-wrapper-29 desktop-only">
               From the airport or from Rome, we strongly recommend renting a
               car, as the area of Montalto does not have taxi services or
               Uber.
             </p>
           </div>
-          <div class="text-third">
-            <p class="text-wrapper-28">
-              Montalto di Castro is also accessible by train from Rome, with a
-              local train station on the main coastal line. However, once in
-              town, transportation options are limited, so a car is still
-              recommended for getting around comfortably.
-            </p>
-          </div>
-        </article>
-        <article class="where-to-stay">
-          <h3 class="sub-heading">Where to stay</h3>
-          <div class="img-container">
-            <img
-              class="where-to-stay-2"
-              src="assets/img/Where to stay 2.png"
-              alt="Hotel illustration"
-              loading="lazy"
-            />
-          </div>
-          <p class="we-have-put-together">
-            <span class="span"
-              >We have put together a list of several hotels available in the
-              area. <br /><br />The three hotels located in Montalto di Castro
-              have a special rate available for our guests with the code
-            </span>
-            <span class="text-wrapper-31"
-              >"Matrimonio Joaquin e Marita"</span>
-          </p>
-          <p class="book-early-notice">We suggest you book your accommodation early as availability
-            is limited, especially during the busy summer season!</p>
-          <img
-            class="vector-3"
-            src="assets/img/paint-roller-rectangle-sm.svg"
-            alt=""
-            role="presentation"
-          />
-        </article>
-        <div class="component">
-          <p class="click-here-to-view">
-            <span class="toggle-prefix">Click </span>
-            <a href="#" id="view-hotels-link" style="color: #0d3950;">here</a>
-            <span class="toggle-suffix"> to view hotels</span>
-          </p>
-          <div id="hotel-list-container"></div>
         </div>
-      </section>
-
-      <section class="around-montalto" id="around-montalto" aria-labelledby="around-montalto-heading">
-        <h2 id="around-montalto-heading" class="title-weekend">Around Montalto</h2>
-        <p class="around-montalto-intro">
-          The area around Montalto offers many activities, from relaxing days at the beach to exploring the local culture and heritage, including great food!
+        <p class="airlines-text mobile-text">
+          Most international airlines have direct flights to Fiumicino.
         </p>
-        <p class="around-montalto-intro">
-          Everything is close enough but keep in mind there is always some driving involved. Also we advise you book the restaurants and the beaches in advance as summer can get very busy around here.
+        <div class="text-second mobile-only">
+          <p class="text-wrapper-29">
+            From the airport or from Rome, we strongly recommend renting a
+            car, as the area of Montalto does not have taxi services or
+            Uber.
+          </p>
+        </div>
+        <div class="text-third">
+          <p class="text-wrapper-28">
+            Montalto di Castro is also accessible by train from Rome, with a
+            local train station on the main coastal line. However, once in
+            town, transportation options are limited, so a car is still
+            recommended for getting around comfortably.
+          </p>
+        </div>
+      </article>
+      <article class="where-to-stay">
+        <h3 class="sub-heading">Where to stay</h3>
+        <div class="img-container">
+          <img class="where-to-stay-2" src="assets/img/Where to stay 2.png" alt="Hotel illustration" loading="lazy" />
+        </div>
+        <p class="we-have-put-together">
+          <span class="span">We have put together a list of several hotels available in the
+            area. <br /><br />The three hotels located in Montalto di Castro
+            have a special rate available for our guests with the code
+          </span>
+          <span class="text-wrapper-31">"Matrimonio Joaquin e Marita"</span>
         </p>
-        <p class="around-montalto-subtitle"><em>Here are a few recommendations:</em></p>
+        <p class="book-early-notice">We suggest you book your accommodation early as availability
+          is limited, especially during the busy summer season!</p>
+        <img class="vector-3" src="assets/img/paint-roller-rectangle-sm.svg" alt="" role="presentation" />
+      </article>
+      <div class="component">
+        <p class="click-here-to-view">
+          <span class="toggle-prefix">Click </span>
+          <a href="#" id="view-hotels-link" style="color: #0d3950;">here</a>
+          <span class="toggle-suffix"> to view hotels</span>
+        </p>
+        <div id="hotel-list-container"></div>
+      </div>
+    </section>
 
-        <div class="recommendations-wrapper">
-          <div class="tabs" role="tablist" aria-label="Recommendations">
-            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-beaches" data-tab="beaches">BEACHES</button>
-            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-cultural" data-tab="cultural">CULTURAL</button>
-            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-restaurants" data-tab="restaurants">RESTAURANTS</button>
-          </div>
-          <div class="recommendations-card">
+    <section class="around-montalto" id="around-montalto" aria-labelledby="around-montalto-heading">
+      <h2 id="around-montalto-heading" class="title-weekend">Around Montalto</h2>
+      <p class="around-montalto-intro">
+        The area around Montalto offers many activities, from relaxing days at the beach to exploring the local culture
+        and heritage, including great food!
+      </p>
+      <p class="around-montalto-intro">
+        Everything is close enough but keep in mind there is always some driving involved. Also we advise you book the
+        restaurants and the beaches in advance as summer can get very busy around here.
+      </p>
+      <p class="around-montalto-subtitle"><em>Here are a few recommendations:</em></p>
+
+      <div class="recommendations-wrapper">
+        <div class="tabs" role="tablist" aria-label="Recommendations">
+          <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-beaches"
+            data-tab="beaches">BEACHES</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-cultural"
+            data-tab="cultural">CULTURAL</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-restaurants"
+            data-tab="restaurants">RESTAURANTS</button>
+        </div>
+        <div class="recommendations-card">
 
           <div id="panel-beaches" class="tab-panel active" role="tabpanel">
             <ul class="recommendations-list">
@@ -504,6 +361,8 @@
               <li>Frigidaire – Capalbio</li>
               <li>Le Streghe – Orbetello</li>
             </ul>
+            <img class="tab-panel-img" src="assets/img/tab-beaches.png" alt="Beach umbrella illustration"
+              loading="lazy" />
           </div>
 
           <div id="panel-cultural" class="tab-panel" role="tabpanel">
@@ -517,6 +376,8 @@
               <li>Giardini di Bomarzo – Bomarzo</li>
               <li>Villa Lante – Bagnaia</li>
             </ul>
+            <img class="tab-panel-img" src="assets/img/tab-cultural.png" alt="Italian village illustration"
+              loading="lazy" />
           </div>
 
           <div id="panel-restaurants" class="tab-panel" role="tabpanel">
@@ -533,120 +394,101 @@
               <li>Ristorante La Porta – Capalbio</li>
               <li>Trattoria A Marsi – Marsiliana</li>
             </ul>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="wedding-gifts" id="gifts" aria-labelledby="wedding-gifts-heading">
-        <img
-          class="wedding-gifts-img"
-          src="assets/img/Cornice semplice.png"
-          alt="Decorative floral frame"
-        />
-        <h2 id="wedding-gifts-heading" class="title-weekend">Wedding Gifts</h2>
-        <p class="wedding-gifts-text">
-          The greatest gift is to celebrate with you in Montalto, but if you wish to make us a present please click on the link below
-        </p>
-        <a href="#" class="button-2 wishlist-button">Wishlist</a>
-        <p class="registry-intro">We also have a registry at:</p>
-        <ul class="registry-list">
-          <li>Chez Dédé Store – Via di Monserrato 35</li>
-          <li>Vio's Shop – Via degli Orsini 25</li>
-          <li>Molto Collectibles – Piazza Bainsizza 13</li>
-        </ul>
-      </section>
-
-      <section class="faq-section" id="faq" aria-labelledby="faq-heading">
-        <img
-          class="faq-header-img"
-          src="assets/img/Cornice cani.png"
-          alt="Two dogs with flowers decoration"
-        />
-        <h2 id="faq-heading" class="title-weekend">FAQ's</h2>
-
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Parking at the church</span>
-            <span class="faq-arrow">&#9662;</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p>There are no private garages or parking facilities in the town of Montalto di Castro, but you will be able to find street parking close to the old town in dedicated areas such as:</p>
-            <ul>
-              <li>Via Gravisca</li>
-              <li>Piazza Felice Guglielmi</li>
-              <li>Via Aurelia Tarquinia</li>
-              <li>Viale Giuseppe Garibaldi</li>
-            </ul>
+            <img class="tab-panel-img" src="assets/img/tab-restaurants.png" alt="Pasta dish illustration"
+              loading="lazy" />
           </div>
         </div>
+      </div>
+    </section>
 
-        <hr class="faq-divider" />
+    <section class="wedding-gifts" id="gifts" aria-labelledby="wedding-gifts-heading">
+      <img class="wedding-gifts-img" src="assets/img/Cornice semplice.png" alt="Decorative floral frame" />
+      <h2 id="wedding-gifts-heading" class="title-weekend">Wedding Gifts</h2>
+      <p class="wedding-gifts-text">
+        The greatest gift is to celebrate with you in Montalto, but if you wish to make us a present please click on the
+        link below
+      </p>
+      <a href="#" class="button-2 wishlist-button">Wishlist</a>
+      <p class="registry-intro">We also have a registry at:</p>
+      <ul class="registry-list">
+        <li>Chez Dédé Store – Via di Monserrato 35</li>
+        <li>Vio's Shop – Via degli Orsini 25</li>
+        <li>Molto Collectibles – Piazza Bainsizza 13</li>
+      </ul>
+    </section>
 
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>What to wear</span>
-            <span class="faq-arrow">&#9662;</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p>
-              We kindly invite our guests to dress in elegant formal attire. Gentlemen are encouraged to wear navy blue suits with a tie (please avoid black or light blue suits and bow ties), and ladies to wear elegant cocktail or midi dresses (please avoid black dresses).
-            </p>
-            <p>
-              As the ceremony will be held in a church, we suggest that ladies bring something to cover their shoulders a shawl will be perfectly suitable. Stiletto heels should be avoided, as the wedding will take place entirely in a garden.
-            </p>
-          </div>
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <img class="faq-header-img" src="assets/img/Cornice cani.png" alt="Two dogs with flowers decoration" />
+      <h2 id="faq-heading" class="title-weekend">FAQ's</h2>
+
+      <div class="faq-item">
+        <button class="faq-toggle" aria-expanded="false">
+          <span>Parking at the church</span>
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>There are no private garages or parking facilities in the town of Montalto di Castro, but you will be able
+            to find street parking close to the old town in dedicated areas such as:</p>
+          <ul>
+            <li>Via Gravisca</li>
+            <li>Piazza Felice Guglielmi</li>
+            <li>Via Aurelia Tarquinia</li>
+            <li>Viale Giuseppe Garibaldi</li>
+          </ul>
         </div>
-
-        <hr class="faq-divider" />
-
-        <div class="faq-item">
-          <button class="faq-toggle" aria-expanded="false">
-            <span>Further information</span>
-            <span class="faq-arrow">&#9662;</span>
-          </button>
-          <div class="faq-answer" hidden>
-            <p>
-              For any questions don't hesitate to contact us by email at
-              <a href="mailto:joaquinemarita@alfafcm.com">joaquinemarita@alfafcm.com</a>
-              or via WhatsApp at
-              <a href="https://wa.me/393407009445">+39 340 700 9445</a>.
-            </p>
-          </div>
-        </div>
-
-        <hr class="faq-divider" />
-      </section>
-
-      <div class="division divider-main footer-divider">
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
-        <img
-          class="cornice-puffetti"
-          src="assets/img/Cornice puffetti e querce.png"
-          alt="Decorative floral border"
-        />
       </div>
 
-      <script src="js/script.js"></script>
+      <hr class="faq-divider" />
+
+      <div class="faq-item">
+        <button class="faq-toggle" aria-expanded="false">
+          <span>What to wear</span>
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            We kindly invite our guests to dress in elegant formal attire. Gentlemen are encouraged to wear navy blue
+            suits with a tie (please avoid black or light blue suits and bow ties), and ladies to wear elegant cocktail
+            or midi dresses (please avoid black dresses).
+          </p>
+          <p>
+            As the ceremony will be held in a church, we suggest that ladies bring something to cover their shoulders a
+            shawl will be perfectly suitable. Stiletto heels should be avoided, as the wedding will take place entirely
+            in a garden.
+          </p>
+        </div>
+      </div>
+
+      <hr class="faq-divider" />
+
+      <div class="faq-item">
+        <button class="faq-toggle" aria-expanded="false">
+          <span>Further information</span>
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            For any questions don't hesitate to contact us by email at
+            <a href="mailto:joaquinemarita@alfafcm.com">joaquinemarita@alfafcm.com</a>
+            or via WhatsApp at
+            <a href="https://wa.me/393407009445">+39 340 700 9445</a>.
+          </p>
+        </div>
+      </div>
+
+      <hr class="faq-divider" />
+    </section>
+
+    <div class="division divider-main footer-divider">
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
+      <img class="cornice-puffetti" src="assets/img/Cornice puffetti e querce.png" alt="Decorative floral border" />
     </div>
-  </body>
+
+    <script src="js/script.js"></script>
+  </div>
+</body>
+
 </html>

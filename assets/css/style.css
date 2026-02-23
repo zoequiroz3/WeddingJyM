@@ -815,6 +815,7 @@ img.where-to-stay-2 {
   background: #e6ddc9;
   border-radius: 0 0 16px 16px;
   padding: 30px 50px 40px;
+  overflow: hidden;
 }
 
 .tabs {
@@ -860,10 +861,35 @@ img.where-to-stay-2 {
 .tab-panel {
   display: none;
   text-align: left;
+  position: relative;
 }
 
 .tab-panel.active {
   display: block;
+}
+
+.tab-panel-img {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 230px;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+}
+
+#panel-beaches .tab-panel-img {
+  width: 270px;
+}
+
+#panel-cultural .tab-panel-img {
+  width: 310px;
+}
+
+@media (max-width: 600px) {
+  .tab-panel-img {
+    display: none;
+  }
 }
 
 .recommendations-list {
