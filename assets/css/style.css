@@ -1073,8 +1073,18 @@ img.where-to-stay-2 {
 }
 
 .faq-answer {
-  padding: 0 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
   line-height: 1.6;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 0 15px;
 }
 
 .faq-answer ul {

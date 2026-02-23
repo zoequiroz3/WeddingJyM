@@ -447,16 +447,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const answer = toggle.nextElementSibling;
         const isOpen = toggle.classList.contains('open');
 
+        // Close all other FAQ items
         faqToggles.forEach((otherToggle) => {
           otherToggle.classList.remove('open');
           otherToggle.setAttribute('aria-expanded', 'false');
-          otherToggle.nextElementSibling.hidden = true;
+          otherToggle.nextElementSibling.classList.remove('open');
         });
 
+        // Toggle current item
         if (!isOpen) {
           toggle.classList.add('open');
           toggle.setAttribute('aria-expanded', 'true');
-          answer.hidden = false;
+          answer.classList.add('open');
         }
       });
     });
