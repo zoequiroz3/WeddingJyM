@@ -235,8 +235,12 @@ p {
 
 .cocktail-and-dinner .event-venue {
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin: 0;
+}
+
+.cocktail-and-dinner .location-wrapper {
+  padding-bottom: 100px;
 }
 
 .cocktail-and-dinner .title-weekend {
@@ -319,7 +323,7 @@ p {
 /* Mueve el "Saturday" hacia arriba solo en desktop sin afectar el resto */
 @media (min-width: 769px) {
   .ceremony .event-details>.info-date.desktop-only {
-    transform: translateY(-15px);
+    transform: translateY(10px);
   }
 }
 
