@@ -316,6 +316,13 @@ p {
   margin-bottom: 80px;
 }
 
+/* Mueve el "Saturday" hacia arriba solo en desktop sin afectar el resto */
+@media (min-width: 769px) {
+  .ceremony .event-details>.info-date.desktop-only {
+    transform: translateY(-15px);
+  }
+}
+
 .location-wrapper {
   display: flex;
   flex-direction: column;
