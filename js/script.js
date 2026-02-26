@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorMessage = document.getElementById('error-message');
 
   // SHA-256 hash of the password (not stored in plain text)
-  const PASSWORD_HASH = '3b92445079d7ac834f16e916f7a2751c7fca4c0e9ed5eb341bc96d39e0f04204';
+  const PASSWORD_HASH = '78cdc32945f3724f2def980b463d3f45471ad9463e6b831268a938453e77cb6f';
   const STORAGE_KEY = 'weddingAccessGranted';
 
   // Hash a string using SHA-256
