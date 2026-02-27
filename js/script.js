@@ -49,7 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
       template.remove();
       // Initialize all site features after content is injected
       initSiteFeatures();
+
+      // Scroll to hash target after content is injected and images settle
+      scrollToHash();
     }
+  }
+
+  // Handle scroll to URL hash after content injection
+  function scrollToHash() {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const scrollToTarget = () => {
+      const target = document.querySelector(hash);
+      if (target) {
+        const navbarHeight = 80;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    };
+
+    // Wait for images above the target to load and affect layout
+    setTimeout(scrollToTarget, 300);
+    setTimeout(scrollToTarget, 800);
   }
 
   // Validate password
@@ -111,6 +133,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initRSVP();
     initFAQ();
+    initNavScroll();
+  }
+
+  // --- Precise scroll for navbar hash links ---
+  function initNavScroll() {
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const hash = link.getAttribute('href');
+        const target = document.querySelector(hash);
+        if (target) {
+          e.preventDefault();
+          const doScroll = () => {
+            const navbarHeight = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          };
+          doScroll();
+          // Re-scroll after images may have loaded and shifted layout
+          setTimeout(doScroll, 600);
+          history.replaceState(null, '', hash);
+        }
+      });
+    });
   }
 
   // --- Hotels ---
