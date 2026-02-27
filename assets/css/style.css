@@ -1515,7 +1515,7 @@ img.where-to-stay-2 {
     max-height: 50px;
     max-width: 160px;
     display: block;
-    margin: 25px auto;
+    margin: 50px auto 45px auto;
   }
 
   /* Titles */
@@ -1653,6 +1653,10 @@ img.where-to-stay-2 {
 
   .location-wrapper {
     gap: 15px;
+  }
+
+  .cocktail-and-dinner .location-wrapper {
+    padding-bottom: 50px;
   }
 
   .dress-code {
@@ -1814,11 +1818,16 @@ img.where-to-stay-2 {
 
   /* Travel section mobile - espaciado reducido */
   .travel {
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .travel>.title-weekend {
     margin-bottom: 50px;
+  }
+
+  .title-weekend,
+  .sub-heading {
+    font-weight: 500;
   }
 
   article.how-to-get-here {
