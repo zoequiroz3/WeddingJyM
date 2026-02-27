@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Wishlist - Joaquin & Marita</title>
+    <meta name="description" content="Wedding gift wishlist for Joaquin & Marita." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logoJyM.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="landing-quicksand">
+        <nav class="navbar navbar-visible">
+            <a class="navbar-brand" href="index.html#gifts">
+                <img class="img-logo-nav visible" src="./assets/img/logoJyM.png" alt="Logo JyM" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#ceremony">The Weekend</a></li>
+                <li><a href="index.html#rsvp" class="rsvp-link">RSVP</a></li>
+                <li><a href="index.html#travel">Travel</a></li>
+                <li><a href="index.html#gifts">Gifts</a></li>
+            </ul>
+        </nav>
+
+        <div class="wishlist-page">
+            <a href="index.html#gifts" class="back-arrow" aria-label="Back to Gifts">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Back to Gifts</span>
+            </a>
+
+            <h2 class="title-weekend wishlist-title">Wedding Wishlist</h2>
+
+            <div class="wishlist-widget-wrapper">
+                <div class="widget-label">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <span>Powered by <a href="https://given2.com" target="_blank"
+                            rel="noopener noreferrer">Given2</a></span>
+                </div>
+                <div class="wishlist-widget">
+                    <a href="https://given2.com/it/" class="g2Widget" rel="list-gn9iNsz">Lista regali Given2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//given2.net/g2.js" defer></script>
+    <script>
+        // Fix Given2 iframe scrolling after it loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new MutationObserver((mutations) => {
+                const iframe = document.querySelector('.wishlist-widget iframe');
+                if (iframe) {
+                    iframe.setAttribute('scrolling', 'yes');
+                    iframe.style.height = '100%';
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.querySelector('.wishlist-widget'), {
+                childList: true,
+                subtree: true
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -49,11 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
       template.remove();
       // Initialize all site features after content is injected
       initSiteFeatures();
-
-      // Load Given2 wishlist widget script after content is present
-      const script = document.createElement('script');
-      script.src = '//given2.net/g2.js';
-      document.body.appendChild(script);
     }
   }
 
