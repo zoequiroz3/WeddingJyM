@@ -2470,4 +2470,76 @@ img.where-to-stay-2 {
     font-size: 13px;
     margin: 5px auto 20px;
   }
+
+  .RSVP {
+    background-image: url("../img/RSVPmobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Shrink RSVP form proportionally on mobile */
+  .wrapper-RSVP {
+    padding: 24px 20px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .wrapper-RSVP .title-weekend {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+
+  .form-italic-title {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .fieldset-legend {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .personal-fieldset,
+  .address-fieldset,
+  .attendance-fieldset {
+    margin: 0 0 16px 0;
+  }
+
+  .input-label {
+    font-size: 14px;
+  }
+
+  .input-field {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .input-wrapper {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form-row {
+    gap: 16px;
+  }
+
+  .radio-option label {
+    font-size: 14px;
+  }
+
+  .radio-option input[type="radio"] {
+    width: 12px;
+    height: 12px;
+  }
+
+  .text-wrapper-21 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #rsvp-submit-btn {
+    font-size: 16px;
+    padding: 8px 24px;
+  }
 }
