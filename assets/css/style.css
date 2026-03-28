@@ -1533,12 +1533,13 @@ img.where-to-stay-2 {
   }
 
   .ceremony .event-body {
-    gap: 15px;
+    gap: 5px;
+    margin-left: 15px;
   }
 
   /* Imagen más grande */
   .img-ceremony {
-    width: 55vw;
+    width: 52vw;
     max-width: 250px;
   }
 
@@ -1611,18 +1612,18 @@ img.where-to-stay-2 {
 
   .ceremony .address-street {
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     line-height: 1.3;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .ceremony .address-city {
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     line-height: 1.3;
-    white-space: nowrap;
+    white-space: normal;
     width: 100%;
   }
 
