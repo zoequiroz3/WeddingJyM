@@ -1,61 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- LOGIN FUNCTIONALITY ---
-  const loginOverlay = document.getElementById('login-overlay');
-  const passwordInput = document.getElementById('password-input');
-  const unlockBtn = document.getElementById('unlock-btn');
-  const errorMessage = document.getElementById('error-message');
+  // Initialize all site features immediately (no login required)
+  initSiteFeatures();
+  scrollToHash();
 
-  // SHA-256 hash of the password (not stored in plain text)
-  const PASSWORD_HASH = '78cdc32945f3724f2def980b463d3f45471ad9463e6b831268a938453e77cb6f';
-  const STORAGE_KEY = 'weddingAccessGranted';
-
-  // Hash a string using SHA-256
-  async function hashPassword(password) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  // =============================================
+  // SITE FEATURES (initialized after content load)
+  // =============================================
+  function initSiteFeatures() {
+    initHotels();
+    initTabs();
+    initHamburger();
+    initScrollEffects();
+    initRSVP();
+    initFAQ();
+    initNavScroll();
   }
 
-  // Check if user is already logged in
-  function checkAccess() {
-    const isGranted = sessionStorage.getItem(STORAGE_KEY);
-    if (isGranted === 'true') {
-      hideLogin();
-      injectContent();
-    }
-  }
-
-  // Hide login overlay
-  function hideLogin() {
-    if (loginOverlay) {
-      loginOverlay.classList.add('hidden');
-      setTimeout(() => {
-        loginOverlay.style.display = 'none';
-      }, 500);
-    }
-  }
-
-  // Inject site content from template into the page
-  function injectContent() {
-    const template = document.getElementById('site-content');
-    const mainContent = document.getElementById('main-content');
-
-    if (template && mainContent && mainContent.children.length === 0) {
-      const content = template.content.cloneNode(true);
-      mainContent.appendChild(content);
-      // Remove template from DOM so content can't be inspected
-      template.remove();
-      // Initialize all site features after content is injected
-      initSiteFeatures();
-
-      // Scroll to hash target after content is injected and images settle
-      scrollToHash();
-    }
-  }
-
-  // Handle scroll to URL hash after content injection
+  // Handle scroll to URL hash on page load
   function scrollToHash() {
     const hash = window.location.hash;
     if (!hash) return;
@@ -72,68 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Wait for images above the target to load and affect layout
     setTimeout(scrollToTarget, 300);
     setTimeout(scrollToTarget, 800);
-  }
-
-  // Validate password
-  async function validatePassword() {
-    const enteredPassword = passwordInput ? passwordInput.value.trim() : '';
-
-    if (!enteredPassword) return;
-
-    const enteredHash = await hashPassword(enteredPassword);
-
-    if (enteredHash === PASSWORD_HASH) {
-      // Store access in sessionStorage (clears when browser closes)
-      sessionStorage.setItem(STORAGE_KEY, 'true');
-
-      // Hide error message
-      if (errorMessage) {
-        errorMessage.hidden = true;
-      }
-
-      // Hide login and inject content
-      hideLogin();
-      injectContent();
-    } else {
-      // Show error message
-      if (errorMessage) {
-        errorMessage.hidden = false;
-      }
-
-      // Clear input
-      if (passwordInput) {
-        passwordInput.value = '';
-        passwordInput.focus();
-      }
-    }
-  }
-
-  // Event listeners for login
-  if (unlockBtn && passwordInput) {
-    unlockBtn.addEventListener('click', validatePassword);
-
-    // Allow Enter key to submit
-    passwordInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        validatePassword();
-      }
-    });
-  }
-
-  // Check access on page load
-  checkAccess();
-
-  // =============================================
-  // SITE FEATURES (initialized after content load)
-  // =============================================
-  function initSiteFeatures() {
-    initHotels();
-    initTabs();
-    initHamburger();
-    initScrollEffects();
-    initRSVP();
-    initFAQ();
-    initNavScroll();
   }
 
   // --- Precise scroll for navbar hash links ---

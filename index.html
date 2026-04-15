@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <title>Wedding Invitation - Joaquin & Marita</title>
-  <meta name="description" content="Join us for the wedding." />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Joaquin & Marita - Wedding Invitation" />
-  <meta property="og:description" content="Join us for our wedding celebration." />
-  <meta property="og:image" content="https://joaquinemarita.com/assets/img/logoJyMsm.png" />
-  <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="X-Robots-Tag" content="noindex, nofollow" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/logoJyM.png" />
@@ -25,27 +20,7 @@
 </head>
 
 <body>
-  <!-- Login Overlay -->
-  <div id="login-overlay" class="login-overlay">
-    <div class="login-decoration top-left"></div>
-    <div class="login-decoration top-right"></div>
-    <div class="login-decoration bottom-left"></div>
-    <div class="login-decoration bottom-right"></div>
-
-    <div class="login-content">
-      <img class="login-logo" src="assets/img/logoJyM.png" alt="J&M Logo" />
-      <div class="login-form">
-        <input type="password" id="password-input" class="password-input" placeholder="Enter password"
-          autocomplete="off" />
-        <button id="unlock-btn" class="unlock-btn">Unlock</button>
-      </div>
-      <p id="error-message" class="error-message" hidden>Incorrect password. Please try again.</p>
-    </div>
-  </div>
-
-  <div class="landing-quicksand" id="main-content"></div>
-
-  <template id="site-content">
+  <div class="landing-quicksand" id="main-content">
     <nav class="navbar">
       <a class="navbar-brand" href="#inicio">
         <img class="img-logo-nav" src="./assets/img/logoJyM.png" alt="Logo JyM" />
@@ -499,7 +474,7 @@
     <div class="illustrator-credit">
       <p id="illustrator-credit-p">Illustrations by @tildecor_ ♥</p>
     </div>
-  </template>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
