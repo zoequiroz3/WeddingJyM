@@ -141,10 +141,11 @@
         <p class="form-italic-title">
           Please provide the following information
         </p>
-        <form class="form" action="https://formsubmit.co/joaquinemarita@alfafcm.com" method="POST" id="rsvp-form">
-          <input type="hidden" name="_subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+        <form class="form" id="rsvp-form">
+          <!-- Web3Forms: reemplazá TU_ACCESS_KEY con la clave que te mande el matrimonio -->
+          <input type="hidden" name="access_key" value="2f7f028d-42b9-4d87-9e27-cfcde03f000f">
+          <input type="hidden" name="subject" value="Nueva confirmación de asistencia - Boda Joaquin & Marita">
+          <input type="hidden" name="from_name" value="Web Boda Joaquin & Marita">
           <!-- Honeypot anti-spam field (hidden from humans, bots fill it) -->
           <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
             <label for="website">Website</label>

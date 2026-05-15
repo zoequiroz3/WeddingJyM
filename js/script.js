@@ -337,46 +337,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (rsvpForm && rsvpSubmitBtn) {
+
       rsvpForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Honeypot anti-spam check: if this hidden field is filled, it's a bot
+        // Honeypot anti-spam check
         const honeypot = rsvpForm.querySelector('input[name="website"]');
         if (honeypot && honeypot.value) {
-          // Silently fake success so the bot thinks it worked
           rsvpForm.reset();
           return;
         }
 
-        const formData = new FormData(rsvpForm);
-        // Remove honeypot field from submission
-        formData.delete('website');
         rsvpSubmitBtn.textContent = 'Enviando...';
         rsvpSubmitBtn.classList.add('loading');
+        rsvpSubmitBtn.disabled = true;
 
-        fetch(rsvpForm.action, {
+        const formData = new FormData(rsvpForm);
+        // Quitar el honeypot del envío
+        formData.delete('website');
+
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json, text/plain, */*'
-          }
+          body: formData
         })
-          .then((response) => {
+          .then(res => res.json())
+          .then((data) => {
             rsvpSubmitBtn.textContent = 'Submit';
             rsvpSubmitBtn.classList.remove('loading');
+            rsvpSubmitBtn.disabled = false;
 
-            if (rsvpModal) {
-              rsvpModal.hidden = false;
-              document.body.style.overflow = 'hidden';
+            if (data.success) {
+              if (rsvpModal) {
+                rsvpModal.hidden = false;
+                document.body.style.overflow = 'hidden';
+              }
+              rsvpForm.reset();
+            } else {
+              console.error('Web3Forms error:', data);
+              alert('Hubo un problema al enviar tu confirmación. Por favor intenta de nuevo.');
             }
-
-            rsvpForm.reset();
           })
           .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error de red:', error);
             rsvpSubmitBtn.textContent = 'Submit';
             rsvpSubmitBtn.classList.remove('loading');
-            alert('Hubo un problema al enviar tu confirmación. Por favor intenta de nuevo.');
+            rsvpSubmitBtn.disabled = false;
+            alert('Hubo un problema al enviar tu confirmación. Por favor intenta de nuevo o escribinos a joaquinemarita@alfafcm.com');
           });
       });
     }
